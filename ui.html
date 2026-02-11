@@ -4,48 +4,166 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>athena-tasks</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
+    /* ── CSS Variables ── */
     :root {
+      /* Backgrounds */
       --bg-base: #0D0D0D;
+      --bg-surface: #161616;
+      --bg-elevated: #1E1E1E;
+      --bg-hover: #252525;
+
+      /* Text */
       --text-primary: #E5E5E5;
       --text-secondary: #888888;
+      --text-muted: #555555;
+
+      /* Borders */
+      --border: #2A2A2A;
+      --border-focus: #404040;
+
+      /* Status colors */
+      --status-backlog: #6B7280;
+      --status-in-progress: #3B82F6;
+      --status-blocked: #EF4444;
+      --status-in-review: #F59E0B;
+      --status-done: #10B981;
+
+      /* Priority colors */
+      --priority-critical: #DC2626;
+      --priority-high: #F97316;
+      --priority-medium: #EAB308;
+      --priority-low: #6B7280;
+
+      /* Accent */
+      --accent: #3B82F6;
+      --accent-hover: #2563EB;
+
+      /* Font scale */
+      --text-xs: 11px;
+      --text-sm: 13px;
+      --text-base: 14px;
+      --text-lg: 16px;
+      --text-xl: 20px;
+
+      /* Font families */
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, 'Segoe UI', sans-serif;
+      --font-mono: 'SF Mono', 'JetBrains Mono', 'Consolas', monospace;
+
+      /* Layout */
+      --header-height: 48px;
+      --footer-height: 28px;
     }
 
-    * {
+    /* ── Reset ── */
+    *, *::before, *::after {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
+    /* ── Base ── */
+    html, body {
+      height: 100vh;
+      overflow: hidden;
+    }
+
     body {
       background: var(--bg-base);
       color: var(--text-primary);
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-family: var(--font-sans);
+      font-size: var(--text-base);
+      line-height: 1.5;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ── Layout Regions ── */
+    header {
+      height: var(--header-height);
+      min-height: var(--header-height);
       display: flex;
       align-items: center;
-      justify-content: center;
-      min-height: 100vh;
+      padding: 0 16px;
+      background: var(--bg-surface);
+      border-bottom: 1px solid var(--border);
+      z-index: 10;
     }
 
-    .container {
-      text-align: center;
+    main {
+      flex: 1;
+      overflow-y: auto;
+      padding: 16px;
     }
 
-    h1 {
-      font-size: 20px;
-      font-weight: 600;
+    footer {
+      height: var(--footer-height);
+      min-height: var(--footer-height);
+      display: flex;
+      align-items: center;
+      padding: 0 16px;
+      background: var(--bg-surface);
+      border-top: 1px solid var(--border);
+      font-size: var(--text-xs);
+      color: var(--text-muted);
     }
 
-    p {
-      color: var(--text-secondary);
-      margin-top: 8px;
+    /* ── Scrollbar ── */
+    main::-webkit-scrollbar {
+      width: 6px;
+    }
+    main::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    main::-webkit-scrollbar-thumb {
+      background: var(--border);
+      border-radius: 3px;
+    }
+    main::-webkit-scrollbar-thumb:hover {
+      background: var(--border-focus);
+    }
+
+    /* ── Typography helpers ── */
+    code, pre {
+      font-family: var(--font-mono);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      color: var(--accent-hover);
+    }
+
+    /* ── Mobile breakpoint ── */
+    @media (max-width: 640px) {
+      header {
+        padding: 0 12px;
+      }
+      main {
+        padding: 12px;
+      }
+      footer {
+        padding: 0 12px;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>athena-tasks</h1>
-    <p>Server is running. Full UI coming in Phase 3.</p>
-  </div>
+  <header>
+    <strong>athena-tasks</strong>
+  </header>
+  <main>
+    <!-- Content rendered here by JS -->
+  </main>
+  <footer>
+    <span>athena-tasks</span>
+  </footer>
 </body>
 </html>
