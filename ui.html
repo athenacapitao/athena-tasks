@@ -141,6 +141,135 @@
       color: var(--accent-hover);
     }
 
+    /* ── Token Modal ── */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.85);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      backdrop-filter: blur(4px);
+      transition: opacity 0.2s ease;
+    }
+
+    .modal-overlay.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .modal-content {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 32px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .modal-content h2 {
+      font-size: var(--text-xl);
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--text-primary);
+    }
+
+    .modal-desc {
+      font-size: var(--text-sm);
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+
+    .token-input {
+      width: 100%;
+      padding: 10px 12px;
+      background: var(--bg-base);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--text-primary);
+      font-size: var(--text-base);
+      font-family: var(--font-mono);
+      margin-bottom: 16px;
+      transition: border-color 0.2s ease;
+    }
+
+    .token-input:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+
+    .token-input::placeholder {
+      color: var(--text-muted);
+    }
+
+    .token-remember {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 24px;
+      font-size: var(--text-sm);
+      color: var(--text-secondary);
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .token-remember input {
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+    }
+
+    .token-actions {
+      display: flex;
+      gap: 12px;
+      justify-content: flex-end;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-size: var(--text-sm);
+      font-weight: 500;
+      cursor: pointer;
+      border: none;
+      transition: all 0.15s ease;
+    }
+
+    .btn:focus {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+    .btn:active {
+      transform: scale(0.98);
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent-hover);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text-secondary);
+      border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+      background: var(--bg-hover);
+      color: var(--text-primary);
+    }
+
     /* ── Mobile breakpoint ── */
     @media (max-width: 640px) {
       header {
@@ -152,6 +281,17 @@
       footer {
         padding: 0 12px;
       }
+      .modal-content {
+        padding: 24px;
+        margin: 0 16px;
+        width: calc(100% - 32px);
+      }
+      .token-actions {
+        flex-direction: column;
+      }
+      .btn {
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -160,10 +300,110 @@
     <strong>athena-tasks</strong>
   </header>
   <main>
+    <div id="token-modal" class="modal-overlay hidden">
+      <div class="modal-content">
+        <h2>Enter API Token</h2>
+        <p class="modal-desc">Provide your athena-tasks API token to continue.</p>
+        <input type="password" id="token-input" class="token-input" placeholder="Paste your token here..." autocomplete="off">
+        <label class="token-remember">
+          <input type="checkbox" id="token-remember" checked>
+          Remember token on this device
+        </label>
+        <div class="token-actions">
+          <button id="token-cancel" class="btn btn-secondary">Cancel</button>
+          <button id="token-save" class="btn btn-primary">Save &amp; Continue</button>
+        </div>
+      </div>
+    </div>
+
     <!-- Content rendered here by JS -->
   </main>
   <footer>
     <span>athena-tasks</span>
   </footer>
+
+  <script>
+    // ── App State ──
+    const AppState = {
+      token: localStorage.getItem('api_token') || '',
+      isAuthenticated: false
+    };
+
+    // ── Token Modal Logic ──
+    const tokenModal = document.getElementById('token-modal');
+    const tokenInput = document.getElementById('token-input');
+    const tokenRemember = document.getElementById('token-remember');
+    const tokenSaveBtn = document.getElementById('token-save');
+    const tokenCancelBtn = document.getElementById('token-cancel');
+
+    function checkAuth() {
+      if (AppState.token) {
+        AppState.isAuthenticated = true;
+        hideModal();
+        console.log('✓ Authenticated');
+        // TODO: Initialize app
+      } else {
+        AppState.isAuthenticated = false;
+        showModal();
+      }
+    }
+
+    function showModal() {
+      tokenModal.classList.remove('hidden');
+      tokenInput.focus();
+    }
+
+    function hideModal() {
+      tokenModal.classList.add('hidden');
+    }
+
+    function saveToken() {
+      const token = tokenInput.value.trim();
+      if (!token) {
+        alert('Please enter an API token');
+        return;
+      }
+
+      AppState.token = token;
+      AppState.isAuthenticated = true;
+
+      if (tokenRemember.checked) {
+        localStorage.setItem('api_token', token);
+        console.log('✓ Token saved to localStorage');
+      } else {
+        localStorage.removeItem('api_token');
+        console.log('✓ Token not saved (remember me unchecked)');
+      }
+
+      hideModal();
+      console.log('✓ Authenticated');
+      // TODO: Initialize app
+    }
+
+    // ── Event Listeners ──
+    tokenSaveBtn.addEventListener('click', saveToken);
+    tokenCancelBtn.addEventListener('click', () => {
+      tokenInput.value = '';
+      tokenRemember.checked = true;
+      showModal();
+    });
+
+    tokenInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        saveToken();
+      } else if (e.key === 'Escape') {
+        tokenCancelBtn.click();
+      }
+    });
+
+    // ── Initialize ──
+    document.addEventListener('DOMContentLoaded', () => {
+      if (AppState.token) {
+        tokenInput.value = AppState.token;
+        tokenRemember.checked = true;
+      }
+      checkAuth();
+    });
+  </script>
 </body>
 </html>
