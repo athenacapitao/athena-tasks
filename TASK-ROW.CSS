@@ -1,0 +1,224 @@
+  .task-row {
+      display: flex;
+      align-items: center;
+      height: 56px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      margin-bottom: 8px;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .task-row:hover {
+      border-color: var(--border-focus);
+      transform: translateX(2px);
+    }
+
+    .task-row[data-status="done"] {
+      opacity: 0.6;
+    }
+
+    .task-row[data-status="done"] .task-row-title {
+      text-decoration: line-through;
+      color: var(--text-muted);
+    }
+
+    .task-row-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 60px;
+    }
+
+    .task-priority-bar {
+      width: 3px;
+      height: 24px;
+      border-radius: 1px;
+    }
+
+    .priority-critical {
+      background: var(--priority-critical);
+    }
+
+    .priority-high {
+      background: var(--priority-high);
+    }
+
+    .priority-medium {
+      background: var(--priority-medium);
+    }
+
+    .priority-low {
+      background: var(--priority-low);
+    }
+
+    .task-checkbox {
+      position: relative;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+    }
+
+    .task-checkbox input {
+      opacity: 0;
+      position: absolute;
+      width: 18px;
+      height: 18px;
+    }
+
+    .checkbox-circle {
+      width: 18px;
+      height: 18px;
+      border: 2px solid var(--border);
+      border-radius: 50%;
+      transition: all 0.2s ease;
+    }
+
+    .task-checkbox input:checked + .checkbox-circle {
+      background: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .task-checkbox input:checked + .checkbox-circle::after {
+      content: '✓';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 10px;
+    }
+
+    .task-row-main {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 4px;
+    }
+
+    .task-row-title {
+      font-weight: 500;
+      color: var(--text-primary);
+      font-size: var(--text-base);
+    }
+
+    .task-row-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: var(--text-xs);
+      color: var(--text-secondary);
+    }
+
+    .task-project {
+      max-width: 120px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .task-tags {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      flex-wrap: wrap;
+    }
+
+    .task-tag {
+      padding: 2px 6px;
+      background: var(--bg-elevated);
+      border-radius: 3px;
+      font-family: var(--font-mono);
+    }
+
+    .task-due {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .task-due.overdue {
+      color: var(--priority-critical);
+      font-weight: 600;
+    }
+
+    .task-subtasks {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: var(--text-xs);
+    }
+
+    .subtask-progress {
+      width: 60px;
+      height: 2px;
+      background: var(--border);
+      border-radius: 1px;
+      overflow: hidden;
+    }
+
+    .subtask-bar {
+      height: 100%;
+      background: var(--accent);
+      transition: width 0.3s ease;
+    }
+
+    .subtask-text {
+      color: var(--text-secondary);
+    }
+
+    .task-row-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 100px;
+      justify-content: flex-end;
+    }
+
+    .task-status {
+      font-size: var(--text-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .task-status:hover {
+      filter: brightness(1.1);
+    }
+
+    .task-expand {
+      padding: 6px;
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .task-expand:hover {
+      background: var(--bg-hover);
+      color: var(--text-primary);
+    }
+
+    .task-expand:active {
+      transform: scale(0.95);
+    }
+
+    .task-expand svg {
+      width: 12px;
+      height: 12px;
+      transition: transform 0.2s ease;
+    }
+
+    .task-row.expanded .task-expand svg {
+      transform: rotate(180deg);
+    }
