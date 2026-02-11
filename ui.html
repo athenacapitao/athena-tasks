@@ -338,6 +338,472 @@
       background: var(--status-blocked);
     }
 
+    /* ── Projects Section ── */
+    .section-title {
+      font-size: var(--text-lg);
+      font-weight: 600;
+      margin: 32px 0 20px 0;
+      color: var(--text-primary);
+    }
+
+    .dashboard-projects {
+      margin-bottom: 32px;
+    }
+
+    .projects-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+    }
+
+    .project-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+
+    .project-card:hover {
+      border-color: var(--border-focus);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .project-card.active {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    }
+
+    .project-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .project-icon {
+      width: 32px;
+      height: 32px;
+      background: var(--bg-elevated);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: var(--text-sm);
+      color: var(--accent);
+      text-transform: uppercase;
+    }
+
+    .project-info {
+      flex: 1;
+    }
+
+    .project-name {
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 2px;
+    }
+
+    .project-desc {
+      font-size: var(--text-sm);
+      color: var(--text-secondary);
+    }
+
+    .project-stats {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .stat-badge {
+      font-size: var(--text-xs);
+      font-family: var(--font-mono);
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
+
+    .stat-total {
+      font-size: var(--text-xs);
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+      margin-left: 4px;
+    }
+
+    /* ── Tasks Section ── */
+    .dashboard-tasks {
+      margin-top: 32px;
+    }
+
+    .tasks-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    .task-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+
+    .task-card:hover {
+      border-color: var(--border-focus);
+    }
+
+    .task-card[data-status="done"] {
+      opacity: 0.6;
+    }
+
+    .task-card[data-status="done"]::before {
+      content: '✓';
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      font-size: var(--text-lg);
+      color: var(--status-done);
+    }
+
+    .task-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+
+    .task-title {
+      font-weight: 500;
+      color: var(--text-primary);
+      flex: 1;
+      font-size: var(--text-base);
+    }
+
+    .task-priority {
+      font-size: var(--text-xs);
+      font-family: var(--font-mono);
+      padding: 2px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .priority-critical {
+      background: var(--priority-critical);
+      color: white;
+    }
+
+    .priority-high {
+      background: var(--priority-high);
+      color: white;
+    }
+
+    .priority-medium {
+      background: var(--priority-medium);
+      color: white;
+    }
+
+    .priority-low {
+      background: var(--priority-low);
+      color: white;
+    }
+
+    .task-body {
+      margin-bottom: 12px;
+    }
+
+    .task-description {
+      font-size: var(--text-sm);
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .task-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+    }
+
+    .task-status {
+      font-size: var(--text-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 500;
+    }
+
+    .status-backlog {
+      background: var(--status-backlog);
+      color: white;
+    }
+
+    .status-in-progress {
+      background: var(--status-in-progress);
+      color: white;
+    }
+
+    .status-blocked {
+      background: var(--status-blocked);
+      color: white;
+    }
+
+    .status-in-review {
+      background: var(--status-in-review);
+      color: white;
+    }
+
+    .status-done {
+      background: var(--status-done);
+      color: white;
+    }
+
+    .task-date {
+      font-size: var(--text-xs);
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+    }
+
+    /* ── Projects Section ── */
+    .section-title {
+      font-size: var(--text-lg);
+      font-weight: 600;
+      margin: 32px 0 20px 0;
+      color: var(--text-primary);
+    }
+
+    .dashboard-projects {
+      margin-bottom: 32px;
+    }
+
+    .projects-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+    }
+
+    .project-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+
+    .project-card:hover {
+      border-color: var(--border-focus);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .project-card.active {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    }
+
+    .project-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .project-icon {
+      width: 32px;
+      height: 32px;
+      background: var(--bg-elevated);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: var(--text-sm);
+      color: var(--accent);
+      text-transform: uppercase;
+    }
+
+    .project-info {
+      flex: 1;
+    }
+
+    .project-name {
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 2px;
+    }
+
+    .project-desc {
+      font-size: var(--text-sm);
+      color: var(--text-secondary);
+    }
+
+    .project-stats {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .stat-badge {
+      font-size: var(--text-xs);
+      font-family: var(--font-mono);
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
+
+    .stat-total {
+      font-size: var(--text-xs);
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+      margin-left: 4px;
+    }
+
+    /* ── Tasks Section ── */
+    .dashboard-tasks {
+      margin-top: 32px;
+    }
+
+    .tasks-list {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    .task-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 16px;
+      transition: all 0.2s ease;
+      position: relative;
+    }
+
+    .task-card:hover {
+      border-color: var(--border-focus);
+    }
+
+    .task-card[data-status="done"] {
+      opacity: 0.6;
+    }
+
+    .task-card[data-status="done"]::before {
+      content: '✓';
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      font-size: var(--text-lg);
+      color: var(--status-done);
+    }
+
+    .task-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+
+    .task-title {
+      font-weight: 500;
+      color: var(--text-primary);
+      flex: 1;
+      font-size: var(--text-base);
+    }
+
+    .task-priority {
+      font-size: var(--text-xs);
+      font-family: var(--font-mono);
+      padding: 2px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .priority-critical {
+      background: var(--priority-critical);
+      color: white;
+    }
+
+    .priority-high {
+      background: var(--priority-high);
+      color: white;
+    }
+
+    .priority-medium {
+      background: var(--priority-medium);
+      color: white;
+    }
+
+    .priority-low {
+      background: var(--priority-low);
+      color: white;
+    }
+
+    .task-body {
+      margin-bottom: 12px;
+    }
+
+    .task-description {
+      font-size: var(--text-sm);
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .task-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+    }
+
+    .task-status {
+      font-size: var(--text-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 500;
+    }
+
+    .status-backlog {
+      background: var(--status-backlog);
+      color: white;
+    }
+
+    .status-in-progress {
+      background: var(--status-in-progress);
+      color: white;
+    }
+
+    .status-blocked {
+      background: var(--status-blocked);
+      color: white;
+    }
+
+    .status-in-review {
+      background: var(--status-in-review);
+      color: white;
+    }
+
+    .status-done {
+      background: var(--status-done);
+      color: white;
+    }
+
+    .task-date {
+      font-size: var(--text-xs);
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+    }
+
     /* ── Mobile breakpoint ── */
     @media (max-width: 640px) {
       header {
@@ -372,6 +838,40 @@
       }
       .stat-breakdown {
         flex-wrap: wrap;
+      }
+      .projects-list {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+      .project-card {
+        padding: 12px;
+      }
+      .project-header {
+        gap: 8px;
+      }
+      .project-icon {
+        width: 28px;
+        height: 28px;
+        font-size: var(--text-xs);
+      }
+      .project-stats {
+        gap: 4px;
+      }
+      .tasks-list {
+        gap: 8px;
+      }
+      .task-card {
+        padding: 12px;
+      }
+      .task-header {
+        flex-direction: column;
+        gap: 4px;
+        align-items: flex-start;
+      }
+      .task-footer {
+        flex-direction: column;
+        gap: 6px;
+        align-items: flex-start;
       }
     }
   </style>
@@ -630,7 +1130,65 @@
         </div>
       `;
 
-      main.innerHTML = statsHtml;
+      // Projects section
+      const projectsHtml = `
+        <div class="dashboard-projects">
+          <h2 class="section-title">Projects</h2>
+          <div class="projects-list">
+            ${AppState.projects.map(p => {
+              const pStats = stats.byProject[p.id] || { total: 0, backlog: 0, in_progress: 0, blocked: 0 };
+              const isActive = AppState.activeProjectId === p.id;
+              return `
+                <div class="project-card ${isActive ? 'active' : ''}" onclick="App.setActiveProject('${p.id}')">
+                  <div class="project-header">
+                    <div class="project-icon">${p.name.charAt(0).toUpperCase()}</div>
+                    <div class="project-info">
+                      <div class="project-name">${p.name}</div>
+                      <div class="project-desc">${p.description || 'No description'}</div>
+                    </div>
+                  </div>
+                  <div class="project-stats">
+                    <span class="stat-badge stat-backlog">${pStats.backlog}</span>
+                    <span class="stat-badge stat-in-progress">${pStats.in_progress}</span>
+                    <span class="stat-badge stat-blocked">${pStats.blocked}</span>
+                    <span class="stat-total">${pStats.total} total</span>
+                  </div>
+                </div>
+              `;
+            }).join('')}
+          </div>
+        </div>
+      `;
+
+      // Tasks section
+      const tasksHtml = `
+        <div class="dashboard-tasks">
+          <h2 class="section-title">
+            ${AppState.activeProjectId === 'all' ? 'All Tasks' : AppState.projects.find(p => p.id === AppState.activeProjectId)?.name || 'Tasks'}
+          </h2>
+          <div class="tasks-list">
+            ${AppState.filteredTasks.map(t => {
+              return `
+                <div class="task-card" data-status="${t.status}" data-priority="${t.priority}">
+                  <div class="task-header">
+                    <div class="task-title">${t.title}</div>
+                    <div class="task-priority priority-${t.priority}">${t.priority.toUpperCase()}</div>
+                  </div>
+                  <div class="task-body">
+                    ${t.description ? `<p class="task-description">${t.description}</p>` : ''}
+                  </div>
+                  <div class="task-footer">
+                    <div class="task-status status-${t.status}">${t.status.replace('_', ' ')}</div>
+                    <div class="task-date">${new Date(t.created_at).toLocaleDateString()}</div>
+                  </div>
+                </div>
+              `;
+            }).join('')}
+          </div>
+        </div>
+      `;
+
+      main.innerHTML = statsHtml + projectsHtml + tasksHtml;
     }
 
     // ── Token Modal Logic ──
