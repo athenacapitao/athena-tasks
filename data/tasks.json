@@ -1,1 +1,39 @@
-[]
+[
+  {
+    "id": "t_1770778197860_78dd37",
+    "title": "Test task",
+    "description": null,
+    "project_id": "proj_personal",
+    "status": "backlog",
+    "priority": "medium",
+    "assigned_to": "shared",
+    "created_by": "wilson",
+    "tags": [],
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-11T02:49:57.860Z",
+    "updated_at": "2026-02-11T02:49:57.860Z",
+    "completed_at": null,
+    "report": null,
+    "activity": [
+      {
+        "at": "2026-02-11T02:49:57.860Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      }
+    ]
+  }
+]
