@@ -270,6 +270,74 @@
       color: var(--text-primary);
     }
 
+    /* ── Dashboard Stats ── */
+    .dashboard-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .stat-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 24px;
+      text-align: center;
+      transition: border-color 0.2s ease;
+    }
+
+    .stat-card:hover {
+      border-color: var(--border-focus);
+    }
+
+    .stat-value {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: 8px;
+      color: var(--text-primary);
+    }
+
+    .stat-label {
+      font-size: var(--text-sm);
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 600;
+    }
+
+    .stat-breakdown {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 12px;
+      flex-wrap: wrap;
+    }
+
+    .stat-backlog,
+    .stat-in-progress,
+    .stat-blocked {
+      font-size: var(--text-xs);
+      font-family: var(--font-mono);
+      padding: 4px 8px;
+      border-radius: 4px;
+      color: white;
+    }
+
+    .stat-backlog {
+      background: var(--status-backlog);
+    }
+
+    .stat-in-progress {
+      background: var(--status-in-progress);
+    }
+
+    .stat-blocked {
+      background: var(--status-blocked);
+    }
+
     /* ── Mobile breakpoint ── */
     @media (max-width: 640px) {
       header {
@@ -291,6 +359,19 @@
       }
       .btn {
         width: 100%;
+      }
+      .dashboard-stats {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+      .stat-value {
+        font-size: 36px;
+      }
+      .stat-card {
+        padding: 20px;
+      }
+      .stat-breakdown {
+        flex-wrap: wrap;
       }
     }
   </style>
@@ -326,7 +407,172 @@
     // ── App State ──
     const AppState = {
       token: localStorage.getItem('api_token') || '',
-      isAuthenticated: false
+      isAuthenticated: false,
+
+      // Data
+      tasks: [],
+      projects: [],
+      activeProjectId: 'all', // 'all' or project ID
+      filters: {
+        status: '',
+        priority: '',
+        assignedTo: '',
+        tag: ''
+      },
+
+      // API Configuration
+      apiBase: 'http://127.0.0.1:7700/api',
+
+      // Fetch wrapper with auth
+      async fetch(endpoint, options = {}) {
+        const url = this.apiBase + endpoint;
+
+        // Add auth header if token exists
+        if (this.token) {
+          options.headers = {
+            ...options.headers,
+            'Authorization': `Bearer ${this.token}`
+          };
+        }
+
+        try {
+          const response = await fetch(url, options);
+
+          if (!response.ok) {
+            const error = await response.json().catch(() => ({ error: response.statusText }));
+            throw new Error(error.error || `HTTP ${response.status}`);
+          }
+
+          return await response.json();
+        } catch (error) {
+          console.error('API Error:', error);
+          throw error;
+        }
+      },
+
+      // Load data from API
+      async loadTasks() {
+        const params = new URLSearchParams({
+          include_done: 'false'
+        });
+        this.tasks = await this.fetch(`/tasks?${params}`);
+        console.log(`✓ Loaded ${this.tasks.length} tasks`);
+      },
+
+      async loadProjects() {
+        this.projects = await this.fetch('/projects');
+        console.log(`✓ Loaded ${this.projects.length} projects`);
+      },
+
+      async loadDashboard() {
+        this.dashboard = await this.fetch('/dashboard');
+        console.log(`✓ Loaded dashboard stats`);
+      },
+
+      // CRUD operations
+      async createTask(task) {
+        const newTask = await this.fetch('/tasks', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(task)
+        });
+        this.tasks.push(newTask);
+        return newTask;
+      },
+
+      async updateTask(id, updates) {
+        const updated = await this.fetch(`/tasks/${id}`, {
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(updates)
+        });
+        const index = this.tasks.findIndex(t => t.id === id);
+        if (index !== -1) {
+          this.tasks[index] = updated;
+        }
+        return updated;
+      },
+
+      async completeTask(id, report = {}) {
+        return await this.updateTask(id, {
+          status: 'done',
+          completed_at: new Date().toISOString(),
+          report
+        });
+      },
+
+      async addActivity(taskId, note) {
+        await this.fetch(`/tasks/${id}/activity`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ note })
+        });
+        // Reload task to get updated activity
+        const updated = await this.fetch(`/tasks/${id}`);
+        const index = this.tasks.findIndex(t => t.id === id);
+        if (index !== -1) {
+          this.tasks[index] = updated;
+        }
+      },
+
+      // Filter helpers
+      get filteredTasks() {
+        return this.tasks.filter(task => {
+          // Status filter
+          if (this.filters.status && task.status !== this.filters.status) {
+            return false;
+          }
+          // Priority filter
+          if (this.filters.priority && task.priority !== this.filters.priority) {
+            return false;
+          }
+          // Assigned filter
+          if (this.filters.assignedTo && task.assigned_to !== this.filters.assignedTo) {
+            return false;
+          }
+          // Tag filter
+          if (this.filters.tag && !task.tags?.includes(this.filters.tag)) {
+            return false;
+          }
+          return true;
+        });
+      },
+
+      get projectStats() {
+        const stats = {
+          all: { total: 0, backlog: 0, in_progress: 0, blocked: 0 },
+          byProject: {}
+        };
+
+        this.projects.forEach(p => {
+          stats.byProject[p.id] = { total: 0, backlog: 0, in_progress: 0, blocked: 0 };
+        });
+
+        this.tasks.forEach(task => {
+          // All stats
+          stats.all.total++;
+          stats.all[task.status] = (stats.all[task.status] || 0) + 1;
+
+          // Project stats
+          if (task.project_id && stats.byProject[task.project_id]) {
+            stats.byProject[task.project_id].total++;
+            stats.byProject[task.project_id][task.status] = 
+              (stats.byProject[task.project_id][task.status] || 0) + 1;
+          }
+        });
+
+        return stats;
+      },
+
+      setFilter(type, value) {
+        this.filters[type] = value;
+        console.log(`✓ Filter set: ${type} = ${value}`);
+      },
+
+      setActiveProject(projectId) {
+        this.activeProjectId = projectId;
+        console.log(`✓ Active project: ${projectId}`);
+      }
     };
 
     // ── Token Modal Logic ──
@@ -336,18 +582,58 @@
     const tokenSaveBtn = document.getElementById('token-save');
     const tokenCancelBtn = document.getElementById('token-cancel');
 
-    function checkAuth() {
-      if (AppState.token) {
-        AppState.isAuthenticated = true;
-        hideModal();
-        console.log('✓ Authenticated');
-        // TODO: Initialize app
-      } else {
+    // ── App Initialization ──
+    async function initializeApp() {
+      try {
+        console.log('🔄 Loading data from API...');
+
+        // Load all data in parallel
+        await Promise.all([
+          AppState.loadTasks(),
+          AppState.loadProjects(),
+          AppState.loadDashboard()
+        ]);
+
+        console.log('✓ App initialized successfully');
+        // TODO: Render dashboard
+        renderDashboard();
+      } catch (error) {
+        console.error('✗ Failed to initialize app:', error);
+        alert(`Failed to load data: ${error.message}`);
+
+        // Show modal on error
+        AppState.token = '';
         AppState.isAuthenticated = false;
+        localStorage.removeItem('api_token');
         showModal();
       }
     }
 
+    // ── Render Functions ──
+    function renderDashboard() {
+      console.log('🎨 Rendering dashboard...');
+      const main = document.querySelector('main');
+
+      // Stats section
+      const stats = AppState.projectStats;
+      const statsHtml = `
+        <div class="dashboard-stats">
+          <div class="stat-card">
+            <div class="stat-value">${stats.all.total}</div>
+            <div class="stat-label">All Tasks</div>
+            <div class="stat-breakdown">
+              <span class="stat-backlog">${stats.all.backlog} backlog</span>
+              <span class="stat-in-progress">${stats.all.in_progress} in progress</span>
+              <span class="stat-blocked">${stats.all.blocked} blocked</span>
+            </div>
+          </div>
+        </div>
+      `;
+
+      main.innerHTML = statsHtml;
+    }
+
+    // ── Token Modal Logic ──
     function showModal() {
       tokenModal.classList.remove('hidden');
       tokenInput.focus();
@@ -376,8 +662,10 @@
       }
 
       hideModal();
-      console.log('✓ Authenticated');
-      // TODO: Initialize app
+      console.log('✓ Authenticated - initializing app...');
+
+      // Initialize app after auth
+      initializeApp();
     }
 
     // ── Event Listeners ──
@@ -398,11 +686,17 @@
 
     // ── Initialize ──
     document.addEventListener('DOMContentLoaded', () => {
+      // Pre-fill token if exists
       if (AppState.token) {
         tokenInput.value = AppState.token;
         tokenRemember.checked = true;
+
+        // Auto-initialize app if token exists
+        initializeApp();
+      } else {
+        // Show modal if no token
+        showModal();
       }
-      checkAuth();
     });
   </script>
 </body>
