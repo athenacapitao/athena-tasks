@@ -804,6 +804,83 @@
       font-family: var(--font-mono);
     }
 
+    /* ── Filter Bar ── */
+    .filter-bar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      padding: 16px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+
+    .filter-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .filter-label {
+      font-size: var(--text-sm);
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    .filter-select,
+    .filter-input {
+      padding: 8px 12px;
+      background: var(--bg-base);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      color: var(--text-primary);
+      font-size: var(--text-sm);
+      font-family: var(--font-mono);
+      transition: border-color 0.2s ease;
+    }
+
+    .filter-select:focus,
+    .filter-input:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+
+    .filter-select {
+      cursor: pointer;
+    }
+
+    .filter-input {
+      min-width: 200px;
+    }
+
+    .filter-input::placeholder {
+      color: var(--text-muted);
+    }
+
+    .filter-clear {
+      padding: 8px 16px;
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      color: var(--text-secondary);
+      font-size: var(--text-sm);
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .filter-clear:hover {
+      background: var(--bg-hover);
+      color: var(--text-primary);
+      border-color: var(--border-focus);
+    }
+
+    .filter-clear:active {
+      transform: scale(0.98);
+    }
+
     /* ── Mobile breakpoint ── */
     @media (max-width: 640px) {
       header {
@@ -917,7 +994,8 @@
         status: '',
         priority: '',
         assignedTo: '',
-        tag: ''
+        tag: '',
+        search: ''
       },
 
       // API Configuration
@@ -1034,6 +1112,14 @@
           if (this.filters.tag && !task.tags?.includes(this.filters.tag)) {
             return false;
           }
+          // Search filter (title or description)
+          if (this.filters.search) {
+            const searchLower = this.filters.search.toLowerCase();
+            if (!task.title?.toLowerCase().includes(searchLower) &&
+                  !task.description?.toLowerCase().includes(searchLower)) {
+              return false;
+            }
+          }
           return true;
         });
       },
@@ -1072,6 +1158,21 @@
       setActiveProject(projectId) {
         this.activeProjectId = projectId;
         console.log(`✓ Active project: ${projectId}`);
+      },
+
+      clearFilters() {
+        this.filters = {
+          status: '',
+          priority: '',
+          assignedTo: '',
+          tag: '',
+          search: ''
+        };
+        document.getElementById('status-filter').value = '';
+        document.getElementById('priority-filter').value = '';
+        document.getElementById('search-filter').value = '';
+        console.log('✓ Filters cleared');
+        renderDashboard();
       }
     };
 
@@ -1166,6 +1267,34 @@
           <h2 class="section-title">
             ${AppState.activeProjectId === 'all' ? 'All Tasks' : AppState.projects.find(p => p.id === AppState.activeProjectId)?.name || 'Tasks'}
           </h2>
+          <div class="filter-bar">
+            <div class="filter-group">
+              <label class="filter-label">Status</label>
+              <select id="status-filter" class="filter-select">
+                <option value="">All Status</option>
+                <option value="backlog">Backlog</option>
+                <option value="in_progress">In Progress</option>
+                <option value="blocked">Blocked</option>
+                <option value="in_review">In Review</option>
+                <option value="done">Done</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label class="filter-label">Priority</label>
+              <select id="priority-filter" class="filter-select">
+                <option value="">All Priorities</option>
+                <option value="critical">Critical</option>
+                <option value="high">High</option>
+                <option value="medium">Medium</option>
+                <option value="low">Low</option>
+              </select>
+            </div>
+            <div class="filter-group">
+              <label class="filter-label">Search</label>
+              <input type="text" id="search-filter" class="filter-input" placeholder="Search tasks..." />
+            </div>
+            <button id="clear-filters" class="filter-clear">Clear</button>
+          </div>
           <div class="tasks-list">
             ${AppState.filteredTasks.map(t => {
               return `
@@ -1241,6 +1370,37 @@
         tokenCancelBtn.click();
       }
     });
+
+    // ── Filter Event Listeners ──
+    document.getElementById('status-filter').addEventListener('change', (e) => {
+      AppState.setFilter('status', e.target.value);
+    });
+
+    document.getElementById('priority-filter').addEventListener('change', (e) => {
+      AppState.setFilter('priority', e.target.value);
+    });
+
+    document.getElementById('search-filter').addEventListener('input', (e) => {
+      AppState.setFilter('search', e.target.value);
+    });
+
+    document.getElementById('clear-filters').addEventListener('click', () => {
+      AppState.clearFilters();
+    });
+
+    // ── Project Card Click Handlers ──
+    window.App = {
+      setActiveProject(projectId) {
+        AppState.setActiveProject(projectId);
+        renderDashboard();
+      },
+      setFilter(type, value) {
+        AppState.setFilter(type, value);
+      },
+      clearFilters() {
+        AppState.clearFilters();
+      }
+    };
 
     // ── Initialize ──
     document.addEventListener('DOMContentLoaded', () => {
