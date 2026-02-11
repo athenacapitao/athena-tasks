@@ -95,6 +95,84 @@
       z-index: 10;
     }
 
+    .header-content {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: var(--text-base);
+      font-weight: 600;
+      color: var(--text-primary);
+      letter-spacing: -0.02em;
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .header-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--text-secondary);
+      font-size: var(--text-sm);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .header-btn:hover {
+      background: var(--bg-hover);
+      color: var(--text-primary);
+      border-color: var(--border-focus);
+    }
+
+    .header-btn:active {
+      transform: scale(0.98);
+    }
+
+    .header-btn-header-btn-primary {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: white;
+    }
+
+    .header-btn-header-btn-primary:hover {
+      background: var(--accent-hover);
+      border-color: var(--accent-hover);
+    }
+
+    .header-btn svg {
+      width: 14px;
+      height: 14px;
+    }
+
+    .header-user {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      background: var(--bg-elevated);
+      border-radius: 6px;
+      font-size: var(--text-sm);
+      color: var(--text-secondary);
+    }
+
+    .user-name {
+      max-width: 120px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
     main {
       flex: 1;
       overflow-y: auto;
@@ -111,6 +189,25 @@
       border-top: 1px solid var(--border);
       font-size: var(--text-xs);
       color: var(--text-muted);
+    }
+
+    .footer-content {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .footer-stats {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: var(--font-mono);
+    }
+
+    .footer-brand {
+      font-weight: 600;
+      letter-spacing: -0.02em;
     }
 
     /* ── Scrollbar ── */
@@ -955,7 +1052,27 @@
 </head>
 <body>
   <header>
-    <strong>athena-tasks</strong>
+    <div class="header-content">
+      <strong class="logo">athena-tasks</strong>
+      <nav class="header-nav">
+        <button id="refresh-btn" class="header-btn" title="Refresh data">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M1 8a7 7 0 1 0 7 7 7 7 0 0 0-7-7m0 0v5m0 0H1m0 0V8z" />
+            <path d="M8 1v5m7-7v5" />
+          </svg>
+        </button>
+        <button id="new-task-btn" class="header-btn header-btn-primary" title="New task">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="8" y1="1" x2="8" y2="15" />
+            <line x1="1" y1="8" x2="15" y2="8" />
+          </svg>
+          <span>New Task</span>
+        </button>
+        <div class="header-user">
+          <span id="user-display" class="user-name">Loading...</span>
+        </div>
+      </nav>
+    </div>
   </header>
   <main>
     <div id="token-modal" class="modal-overlay hidden">
@@ -977,7 +1094,13 @@
     <!-- Content rendered here by JS -->
   </main>
   <footer>
-    <span>athena-tasks</span>
+    <div class="footer-content">
+      <span class="footer-stats">
+        <span id="footer-task-count">0 tasks</span> ·
+        <span id="footer-done-count">0 done</span>
+      </span>
+      <span class="footer-brand">athena-tasks</span>
+    </div>
   </footer>
 
   <script>
