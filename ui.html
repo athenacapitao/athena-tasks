@@ -367,6 +367,20 @@
       color: var(--text-primary);
     }
 
+  /* ── Task List (Row View) ── */
+  .task-row {
+      display: flex;
+      align-items: center;
+      height: 56px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      margin-bottom: 8px;
+      transition: all 0.2s ease;
+      cursor: pointer;
+      position: relative;
+    }
+
     /* ── Dashboard Stats ── */
     .dashboard-stats {
       display: grid;
@@ -1202,6 +1216,33 @@
         });
       },
 
+      async toggleComplete(taskId) {
+        const task = this.tasks.find(t => t.id === taskId);
+        if (task.status === 'done') {
+          await this.updateTask(taskId, { status: task.previous_status || 'backlog', completed_at: null });
+        } else {
+          await this.completeTask(taskId, { previous_status: task.status });
+        }
+        await this.loadTasks(); // Reload to get updated state
+        renderDashboard();
+      },
+
+      async toggleStatus(taskId) {
+        const task = this.tasks.find(t => t.id === taskId);
+        const statusOrder = ['backlog', 'in_progress', 'in_review', 'done'];
+        const currentIndex = statusOrder.indexOf(task.status);
+        const nextIndex = (currentIndex + 1) % statusOrder.length;
+        await this.updateTask(taskId, { status: statusOrder[nextIndex] });
+        await this.loadTasks();
+        renderDashboard();
+      },
+
+      selectTask(taskId) {
+        this.selectedTaskId = taskId;
+        console.log(`✓ Selected task: ${taskId}`);
+        renderDashboard();
+      },
+
       async addActivity(taskId, note) {
         await this.fetch(`/tasks/${id}/activity`, {
           method: 'POST',
@@ -1420,18 +1461,40 @@
           </div>
           <div class="tasks-list">
             ${AppState.filteredTasks.map(t => {
+              const isOverdue = t.due_date && new Date(t.due_date) < new Date();
+              const progress = t.subtasks ? Math.round((t.subtasks.filter(s => s.done).length / t.subtasks.length) * 100) : 0;
               return `
-                <div class="task-card" data-status="${t.status}" data-priority="${t.priority}">
-                  <div class="task-header">
-                    <div class="task-title">${t.title}</div>
-                    <div class="task-priority priority-${t.priority}">${t.priority.toUpperCase()}</div>
+                <div class="task-row" data-id="${t.id}" data-status="${t.status}" data-priority="${t.priority}">
+                  <div class="task-row-left">
+                    <div class="task-priority-bar priority-${t.priority}"></div>
+                    <label class="task-checkbox">
+                      <input type="checkbox" ${t.status === 'done' ? 'checked' : ''} onclick="App.toggleComplete('${t.id}')" />
+                      <span class="checkbox-circle"></span>
+                    </label>
                   </div>
-                  <div class="task-body">
-                    ${t.description ? `<p class="task-description">${t.description}</p>` : ''}
+                  <div class="task-row-main">
+                    <div class="task-row-title">${t.title}</div>
+                    <div class="task-row-meta">
+                      <span class="task-project">${t.project_name || 'No Project'}</span>
+                      ${t.tags?.length ? `<span class="task-tags">${t.tags.map(tag => \`<span class="task-tag">\${tag}</span>\`).join('')}</span>` : ''}
+                      ${t.due_date ? \`<span class="task-due \${isOverdue ? 'overdue' : ''}">📅 ${new Date(t.due_date).toLocaleDateString()}</span>\` : ''}
+                    </div>
+                    ${t.subtasks?.length ? `
+                      <div class="task-subtasks">
+                        <div class="subtask-progress">
+                          <div class="subtask-bar" style="width: ${progress}%"></div>
+                        </div>
+                        <span class="subtask-text">${t.subtasks.filter(s => s.done).length}/${t.subtasks.length} subtasks</span>
+                      </div>
+                    ` : ''}
                   </div>
-                  <div class="task-footer">
-                    <div class="task-status status-${t.status}">${t.status.replace('_', ' ')}</div>
-                    <div class="task-date">${new Date(t.created_at).toLocaleDateString()}</div>
+                  <div class="task-row-right">
+                    <span class="task-status status-${t.status}" onclick="App.toggleStatus('${t.id}')">${t.status.replace('_', ' ')}</span>
+                    <button class="task-expand" onclick="App.selectTask('${t.id}')">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 3 6" />
+                      </svg>
+                    </button>
                   </div>
                 </div>
               `;
@@ -1441,6 +1504,27 @@
       `;
 
       main.innerHTML = statsHtml + projectsHtml + tasksHtml;
+
+      // Update header user display
+      updateUserDisplay();
+    }
+
+    function updateUserDisplay() {
+      const userDisplay = document.getElementById('user-display');
+      if (userDisplay) {
+        // Try to extract username from token (if JWT)
+        try {
+          const parts = AppState.token.split('.');
+          if (parts.length === 3) {
+            const payload = JSON.parse(atob(parts[1]));
+            userDisplay.textContent = payload.username || payload.sub || 'User';
+          } else {
+            userDisplay.textContent = 'Authenticated';
+          }
+        } catch {
+          userDisplay.textContent = 'Authenticated';
+        }
+      }
     }
 
     // ── Token Modal Logic ──
@@ -1517,11 +1601,25 @@
         AppState.setActiveProject(projectId);
         renderDashboard();
       },
+
       setFilter(type, value) {
         AppState.setFilter(type, value);
       },
+
       clearFilters() {
         AppState.clearFilters();
+      },
+
+      toggleComplete(taskId) {
+        AppState.toggleComplete(taskId);
+      },
+
+      toggleStatus(taskId) {
+        AppState.toggleStatus(taskId);
+      },
+
+      selectTask(taskId) {
+        AppState.selectTask(taskId);
       }
     };
 
