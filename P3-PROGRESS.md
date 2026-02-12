@@ -16,16 +16,16 @@
 | P3-05 | Filter row with dropdowns | ✅ Complete | Status, priority, and search filters |
 | P3-06 | Task list — Render task rows | ✅ Complete | Tasks render with priority bars, checkboxes, metadata |
 | P3-07 | Done section — Collapsible completed tasks | ✅ Complete | Collapsible done section implemented |
-| P3-08 | Detail panel — Layout and navigation | ❌ Missing | Panel structure not in HTML |
-| P3-09 | Detail panel — Inline field editing | ❌ Missing | No detail panel to edit |
-| P3-10 | Detail panel — Title and description editing | ❌ Missing | No detail panel to edit |
-| P3-11 | Detail panel — Subtask management | ❌ Missing | No detail panel to edit |
-| P3-12 | Detail panel — Activity log and comment input | ❌ Missing | No detail panel to display |
-| P3-13 | Detail panel — Report display | ❌ Missing | No detail panel to display |
+| P3-08 | Detail panel — Layout and navigation | ✅ Complete | Detail panel with all sections implemented |
+| P3-09 | Detail panel — Inline field editing | ❌ Missing | Need to add dropdown functionality |
+| P3-10 | Detail panel — Title and description editing | ❌ Missing | Need to add edit functionality |
+| P3-11 | Detail panel — Subtask management | ✅ Complete | Subtask checkboxes, add, delete implemented |
+| P3-12 | Detail panel — Activity log and comment input | ✅ Complete | Activity display and comment input implemented |
+| P3-13 | Detail panel — Report display | ✅ Complete | Report section with all fields implemented |
 | P3-14 | New Task modal | ❌ Missing | Modal HTML structure missing |
 | P3-15 | Auto-refresh polling (5-second interval) | ✅ Complete | Polling implemented with visibility check |
 | P3-16 | Footer bar with stats | ✅ Complete | Footer implemented with stats |
-| P3-17 | Deadline and tags display/edit | ❌ Missing | No detail panel to display |
+| P3-17 | Deadline and tags display/edit | ❌ Missing | Need to add edit functionality |
 | P3-18 | App state management and render loop | ✅ Complete | AppState object implemented |
 | P3-19 | Quick-complete checkbox on task rows | ✅ Complete | ToggleComplete implemented |
 | P3-20 | Integration test — Full UI walkthrough | ⏸️ Pending | Complete all above first |
