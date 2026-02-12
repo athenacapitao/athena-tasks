@@ -1184,6 +1184,249 @@
       transition: border-color 0.2s ease;
     }
 
+    /* ── Detail Panel (P3-08) ── */
+    .dp-title-section {
+      margin-bottom: 16px;
+    }
+
+    .dp-title {
+      font-size: var(--text-xl);
+      font-weight: 600;
+      color: var(--text-primary);
+      line-height: 1.4;
+    }
+
+    .dp-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .dp-field {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .dp-dropdown {
+      padding: 8px 10px;
+      background: var(--bg-base);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      color: var(--text-primary);
+      font-size: var(--text-sm);
+      cursor: pointer;
+      transition: border-color 0.2s ease;
+    }
+
+    .dp-dropdown:hover {
+      border-color: var(--border-focus);
+    }
+
+    .dp-value {
+      font-size: var(--text-sm);
+      color: var(--text-primary);
+    }
+
+    .dp-row {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .dp-section {
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .dp-section:last-child {
+      border-bottom: none;
+    }
+
+    .dp-section-title {
+      font-size: var(--text-xs);
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    .dp-description {
+      font-size: var(--text-base);
+      color: var(--text-primary);
+      line-height: 1.6;
+      white-space: pre-wrap;
+    }
+
+    .dp-subtasks {
+      margin-top: 8px;
+    }
+
+    .dp-subtask {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 0;
+      margin-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .dp-subtask input[type="checkbox"] {
+      margin-right: 8px;
+    }
+
+    .dp-subtask-text {
+      flex: 1;
+      font-size: var(--text-sm);
+    }
+
+    .dp-subtask-text.done {
+      text-decoration: line-through;
+      color: var(--text-muted);
+    }
+
+    .dp-subtask-delete {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 14px;
+      opacity: 0;
+      transition: opacity 0.15s ease;
+    }
+
+    .dp-subtask:hover .dp-subtask-delete {
+      opacity: 1;
+    }
+
+    .dp-add-subtask {
+      background: none;
+      border: none;
+      color: var(--accent);
+      cursor: pointer;
+      font-size: var(--text-sm);
+      padding: 4px 0;
+      margin-top: 8px;
+    }
+
+    .dp-add-subtask:hover {
+      color: var(--accent-hover);
+    }
+
+    .dp-activity {
+      margin-top: 8px;
+    }
+
+    .dp-activity-entry {
+      padding: 8px 0;
+      margin-bottom: 12px;
+      border-left: 2px solid var(--border);
+      padding-left: 12px;
+    }
+
+    .dp-activity-header {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 4px;
+    }
+
+    .dp-activity-actor {
+      font-weight: 500;
+      color: var(--text-primary);
+      font-size: var(--text-xs);
+    }
+
+    .dp-activity-time {
+      color: var(--text-muted);
+      font-size: var(--text-xs);
+    }
+
+    .dp-activity-detail {
+      font-size: var(--text-sm);
+      color: var(--text-secondary);
+    }
+
+    .dp-comment-input {
+      display: flex;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .dp-comment-input input {
+      flex: 1;
+      padding: 8px 10px;
+      background: var(--bg-base);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      color: var(--text-primary);
+      font-size: var(--text-sm);
+    }
+
+    .dp-comment-btn {
+      padding: 8px 16px;
+      background: var(--accent);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: var(--text-sm);
+      transition: background 0.2s ease;
+    }
+
+    .dp-comment-btn:hover {
+      background: var(--accent-hover);
+    }
+
+    .dp-report {
+      background: var(--bg-elevated);
+      padding: 12px;
+      border-radius: 8px;
+    }
+
+    .dp-report-badge {
+      font-size: var(--text-xs);
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    .dp-report-summary {
+      font-size: var(--text-sm);
+      color: var(--text-primary);
+      margin-bottom: 8px;
+      line-height: 1.6;
+    }
+
+    .dp-report-files {
+      margin-bottom: 8px;
+      font-size: var(--text-sm);
+      color: var(--text-secondary);
+    }
+
+    .dp-report-files code {
+      background: var(--bg-base);
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+    }
+
+    .dp-report-time {
+      margin-bottom: 8px;
+      font-size: var(--text-sm);
+      color: var(--text-secondary);
+    }
+
+    .dp-report-notes {
+      font-size: var(--text-sm);
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+
     .detail-textarea:focus {
       outline: none;
       border-color: var(--accent);
@@ -1550,6 +1793,18 @@
     <span id="footer-sync" class="footer-sync">Synced --s ago</span>
   </footer>
 
+  <!-- Detail Panel -->
+  <div id="detail-panel" class="detail-panel">
+    <div class="dp-header">
+      <button id="dp-back" class="dp-back-btn">&larr; Back</button>
+      <button class="dp-more-btn" title="More options">⋮</button>
+    </div>
+    <div class="dp-content" id="dp-content">
+      <!-- Content rendered by JS -->
+    </div>
+  </div>
+
+
   <!-- Auth Modal -->
   <div id="auth-modal" class="modal-overlay" style="display: none;">
     <div class="modal">
@@ -1865,8 +2120,250 @@
     }
 
     function renderDetailPanel(taskId) {
-      // P3-08: detail panel
+      const task = state.tasks.find(t => t.id === taskId);
+      if (!task) return;
+
+      const panel = document.getElementById('detail-panel');
+      const content = document.getElementById('dp-content');
+
+      const projectMap = {};
+      state.projects.forEach(p => { projectMap[p.id] = p.name; });
+      const projectName = projectMap[task.project_id] || '';
+
+      const html = `
+        <div class="dp-title-section">
+          <h2 class="dp-title">${escapeHtml(task.title)}</h2>
+        </div>
+
+        <div class="dp-grid">
+          <div class="dp-field">
+            <label>Status</label>
+            <div class="dp-dropdown" id="dp-status">${task.status.replace(/-/g, ' ')}</div>
+          </div>
+          <div class="dp-field">
+            <label>Priority</label>
+            <div class="dp-dropdown" id="dp-priority">${task.priority}</div>
+          </div>
+          <div class="dp-field">
+            <label>Assigned</label>
+            <div class="dp-dropdown" id="dp-assigned">${task.assigned_to}</div>
+          </div>
+          <div class="dp-field">
+            <label>Project</label>
+            <div class="dp-dropdown" id="dp-project">${projectName}</div>
+          </div>
+        </div>
+
+        <div class="dp-row">
+          <div class="dp-field">
+            <label>Deadline</label>
+            <div class="dp-value" id="dp-deadline">
+              ${task.deadline ? new Date(task.deadline).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : 'No deadline'}
+            </div>
+          </div>
+          <div class="dp-field">
+            <label>Tags</label>
+            <div class="dp-tags" id="dp-tags">
+              ${task.tags?.map(t => `<span class="dp-tag">${escapeHtml(t)}</span>`).join('') || '<span style="color: var(--text-muted);">None</span>'}
+            </div>
+          </div>
+        </div>
+
+        <div class="dp-section">
+          <h3 class="dp-section-title">Description</h3>
+          <div class="dp-description" id="dp-description">
+            ${task.description ? escapeHtml(task.description).replace(/\n/g, '<br>') : '<span style="color: var(--text-muted);">No description</span>'}
+          </div>
+        </div>
+
+        <div class="dp-section">
+          <h3 class="dp-section-title">Subtasks</h3>
+          <div class="dp-subtasks" id="dp-subtasks">
+            ${task.subtasks?.length ? task.subtasks.map(st => `
+              <div class="dp-subtask" data-st-id="${st.id}">
+                <input type="checkbox" ${st.done ? 'checked' : ''} data-task-id="${task.id}" data-st-id="${st.id}">
+                <span class="dp-subtask-text ${st.done ? 'done' : ''}">${escapeHtml(st.title)}</span>
+                <button class="dp-subtask-delete" data-task-id="${task.id}" data-st-id="${st.id}" title="Delete">&times;</button>
+              </div>
+            `).join('') : '<span style="color: var(--text-muted);">No subtasks</span>'}
+          </div>
+          <button class="dp-add-subtask" id="dp-add-subtask">+ Add subtask</button>
+        </div>
+
+        <div class="dp-section">
+          <h3 class="dp-section-title">Activity</h3>
+          <div class="dp-activity" id="dp-activity">
+            ${task.activity?.length ? task.activity.slice().reverse().map(act => `
+              <div class="dp-activity-entry">
+                <div class="dp-activity-header">
+                  <span class="dp-activity-actor">${escapeHtml(act.by)}</span>
+                  <span class="dp-activity-time">${formatRelativeTime(act.at)}</span>
+                </div>
+                <div class="dp-activity-detail">
+                  ${act.action === 'status_changed' ? `Status: ${act.detail}` :
+                    act.action === 'comment' ? escapeHtml(act.detail) :
+                    escapeHtml(act.action)}
+                </div>
+              </div>
+            `).join('') : '<span style="color: var(--text-muted);">No activity</span>'}
+          </div>
+          <div class="dp-comment-input">
+            <input type="text" id="dp-comment-input" placeholder="Add a comment...">
+            <button class="dp-comment-btn" id="dp-comment-btn">Send</button>
+          </div>
+        </div>
+
+        ${task.status === 'done' && task.report ? `
+          <div class="dp-section">
+            <h3 class="dp-section-title">Report</h3>
+            <div class="dp-report">
+              <div class="dp-report-badge">
+                ${task.report.verified ? '✅ Verified' : '⚠ Not verified'}
+                ${task.report.verified_at ? ` · ${formatRelativeTime(task.report.verified_at)}` : ''}
+              </div>
+              <div class="dp-report-summary">${escapeHtml(task.report.summary)}</div>
+              ${task.report.files_changed?.length ? `
+                <div class="dp-report-files">
+                  <strong>Files:</strong>
+                  ${task.report.files_changed.map(f => `<code>${escapeHtml(f)}</code>`).join(', ')}
+                </div>
+              ` : ''}
+              ${task.report.time_spent_minutes ? `
+                <div class="dp-report-time">
+                  <strong>Time:</strong> ${task.report.time_spent_minutes} minutes
+                </div>
+              ` : ''}
+              ${task.report.verification_notes ? `
+                <div class="dp-report-notes">${escapeHtml(task.report.verification_notes)}</div>
+              ` : ''}
+            </div>
+          </div>
+        ` : ''}
+      `;
+
+      content.innerHTML = html;
+      panel.classList.add('open');
+      state.panelOpen = true;
+
+      // Bind events for detail panel
+      bindDetailPanelEvents(taskId);
     }
+
+    function formatRelativeTime(isoDate) {
+      const now = new Date();
+      const date = new Date(isoDate);
+      const diffMs = now - date;
+      const diffMins = Math.floor(diffMs / 60000);
+      const diffHours = Math.floor(diffMins / 60);
+      const diffDays = Math.floor(diffHours / 24);
+
+      if (diffMins < 1) return 'just now';
+      if (diffMins < 60) return `${diffMins}m ago`;
+      if (diffHours < 24) return `${diffHours}h ago`;
+      if (diffDays < 7) return `${diffDays}d ago`;
+      return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+    }
+
+    function bindDetailPanelEvents(taskId) {
+      // Back button
+      document.getElementById('dp-back')?.addEventListener('click', () => {
+        const panel = document.getElementById('detail-panel');
+        panel.classList.remove('open');
+        state.panelOpen = false;
+        state.selectedTaskId = null;
+      });
+
+      // Comment input
+      const commentInput = document.getElementById('dp-comment-input');
+      const commentBtn = document.getElementById('dp-comment-btn');
+      commentBtn?.addEventListener('click', async () => {
+        const detail = commentInput?.value.trim();
+        if (!detail) return;
+
+        try {
+          await api(`/tasks/${taskId}/activity`, {
+            method: 'POST',
+            body: JSON.stringify({
+              by: 'wilson',
+              action: 'comment',
+              detail: detail
+            })
+          });
+          await fetchData();
+          renderDetailPanel(taskId);
+        } catch (err) {
+          console.error('Failed to add comment:', err);
+        }
+      });
+
+      // Add subtask button
+      document.getElementById('dp-add-subtask')?.addEventListener('click', async () => {
+        const title = prompt('Subtask title:');
+        if (!title) return;
+
+        try {
+          await api(`/tasks/${taskId}/subtasks`, {
+            method: 'POST',
+            body: JSON.stringify({ title })
+          });
+          await fetchData();
+          renderDetailPanel(taskId);
+        } catch (err) {
+          console.error('Failed to add subtask:', err);
+        }
+      });
+
+      // Subtask checkboxes
+      document.querySelectorAll('.dp-subtask input').forEach(cb => {
+        cb.addEventListener('change', async (e) => {
+          const stId = e.target.dataset.stId;
+          const task_id = e.target.dataset.taskId;
+
+          try {
+            await api(`/tasks/${task_id}/subtasks/${stId}`, {
+              method: 'PATCH',
+              body: JSON.stringify({ done: e.target.checked })
+            });
+            await fetchData();
+            renderDetailPanel(taskId);
+          } catch (err) {
+            console.error('Failed to toggle subtask:', err);
+            e.target.checked = !e.target.checked;
+          }
+        });
+      });
+
+      // Subtask delete buttons
+      document.querySelectorAll('.dp-subtask-delete').forEach(btn => {
+        btn.addEventListener('click', async (e) => {
+          if (!confirm('Delete this subtask?')) return;
+
+          const stId = e.target.dataset.stId;
+          const task_id = e.target.dataset.taskId;
+
+          try {
+            await api(`/tasks/${task_id}/subtasks/${stId}`, {
+              method: 'DELETE'
+            });
+            await fetchData();
+            renderDetailPanel(taskId);
+          } catch (err) {
+            console.error('Failed to delete subtask:', err);
+          }
+        });
+      });
+    }
+
+    // Close panel on ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && state.panelOpen) {
+        const panel = document.getElementById('detail-panel');
+        panel.classList.remove('open');
+        state.panelOpen = false;
+        state.selectedTaskId = null;
+      }
+    });
+
 
     function renderFooter() {
       const now = state.lastSync;
