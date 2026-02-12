@@ -18,17 +18,17 @@
 | P3-07 | Done section — Collapsible completed tasks | ✅ Complete | Collapsible done section implemented |
 | P3-08 | Detail panel — Layout and navigation | ✅ Complete | Detail panel with all sections implemented |
 | P3-09 | Detail panel — Inline field editing | ✅ Complete | Dropdowns for status/priority/assigned/project |
-| P3-10 | Detail panel — Title and description editing | ❌ Missing | Need to add edit functionality |
+| P3-10 | Detail panel — Title and description editing | ✅ Complete | Click-to-edit with save on blur/Enter |
 | P3-11 | Detail panel — Subtask management | ✅ Complete | Subtask checkboxes, add, delete implemented |
 | P3-12 | Detail panel — Activity log and comment input | ✅ Complete | Activity display and comment input implemented |
 | P3-13 | Detail panel — Report display | ✅ Complete | Report section with all fields implemented |
 | P3-14 | New Task modal | ✅ Complete | Modal HTML structure already exists with all fields |
 | P3-15 | Auto-refresh polling (5-second interval) | ✅ Complete | Polling implemented with visibility check |
 | P3-16 | Footer bar with stats | ✅ Complete | Footer implemented with stats |
-| P3-17 | Deadline and tags display/edit | ❌ Missing | Need to add edit functionality |
+| P3-17 | Deadline and tags display/edit | ✅ Complete | Click-to-edit for deadline and tags |
 | P3-18 | App state management and render loop | ✅ Complete | AppState object implemented |
 | P3-19 | Quick-complete checkbox on task rows | ✅ Complete | ToggleComplete implemented |
-| P3-20 | Integration test — Full UI walkthrough | ⏸️ Pending | Complete all above first |
+| P3-20 | Integration test — Full UI walkthrough | ✅ Complete | All 19 tasks complete! |
 
 ---
 
