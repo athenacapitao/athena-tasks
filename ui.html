@@ -1224,6 +1224,41 @@
       border-color: var(--border-focus);
     }
 
+    .dp-dropdown-container {
+      position: relative;
+    }
+
+    .dp-dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      z-index: 10;
+      min-width: 140px;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      display: none;
+      margin-top: 4px;
+    }
+
+    .dp-dropdown-menu.open {
+      display: block;
+    }
+
+    .dp-dropdown-item {
+      padding: 8px 12px;
+      cursor: pointer;
+      font-size: var(--text-sm);
+      color: var(--text-primary);
+      transition: background 0.15s ease;
+    }
+
+    .dp-dropdown-item:hover {
+      background: var(--bg-hover);
+    }
+
+
     .dp-value {
       font-size: var(--text-sm);
       color: var(--text-primary);
@@ -2138,19 +2173,47 @@
         <div class="dp-grid">
           <div class="dp-field">
             <label>Status</label>
-            <div class="dp-dropdown" id="dp-status">${task.status.replace(/-/g, ' ')}</div>
+            <div class="dp-dropdown-container" data-dropdown="status">
+              <div class="dp-dropdown" id="dp-status">${task.status.replace(/-/g, ' ')}</div>
+              <div class="dp-dropdown-menu" id="dp-status-menu">
+                ${['backlog', 'in_progress', 'blocked', 'in_review', 'done'].map(s =>
+                  `<div class="dp-dropdown-item" data-value="${s}">${s.replace(/_/g, ' ')}</div>`
+                ).join('')}
+              </div>
+            </div>
           </div>
           <div class="dp-field">
             <label>Priority</label>
-            <div class="dp-dropdown" id="dp-priority">${task.priority}</div>
+            <div class="dp-dropdown-container" data-dropdown="priority">
+              <div class="dp-dropdown" id="dp-priority">${task.priority}</div>
+              <div class="dp-dropdown-menu" id="dp-priority-menu">
+                ${['critical', 'high', 'medium', 'low'].map(p =>
+                  `<div class="dp-dropdown-item" data-value="${p}">${p}</div>`
+                ).join('')}
+              </div>
+            </div>
           </div>
           <div class="dp-field">
             <label>Assigned</label>
-            <div class="dp-dropdown" id="dp-assigned">${task.assigned_to}</div>
+            <div class="dp-dropdown-container" data-dropdown="assigned">
+              <div class="dp-dropdown" id="dp-assigned">${task.assigned_to}</div>
+              <div class="dp-dropdown-menu" id="dp-assigned-menu">
+                ${['wilson', 'athena', 'shared'].map(a =>
+                  `<div class="dp-dropdown-item" data-value="${a}">${a}</div>`
+                ).join('')}
+              </div>
+            </div>
           </div>
           <div class="dp-field">
             <label>Project</label>
-            <div class="dp-dropdown" id="dp-project">${projectName}</div>
+            <div class="dp-dropdown-container" data-dropdown="project">
+              <div class="dp-dropdown" id="dp-project">${projectName}</div>
+              <div class="dp-dropdown-menu" id="dp-project-menu">
+                ${state.projects.map(p =>
+                  `<div class="dp-dropdown-item" data-value="${p.id}">${escapeHtml(p.name)}</div>`
+                ).join('')}
+              </div>
+            </div>
           </div>
         </div>
 
@@ -2265,6 +2328,71 @@
     }
 
     function bindDetailPanelEvents(taskId) {
+      // Dropdown click handlers
+      document.querySelectorAll('.dp-dropdown-container').forEach(container => {
+        const dropdownType = container.dataset.dropdown;
+        const dropdown = container.querySelector('.dp-dropdown');
+        const menu = container.querySelector('.dp-dropdown-menu');
+
+        dropdown?.addEventListener('click', (e) => {
+          e.stopPropagation();
+          // Close all other dropdowns
+          document.querySelectorAll('.dp-dropdown-menu').forEach(m => m.classList.remove('open'));
+          menu?.classList.toggle('open');
+        });
+
+        // Handle dropdown item selection
+        menu?.querySelectorAll('.dp-dropdown-item').forEach(item => {
+          item.addEventListener('click', async (e) => {
+            e.stopPropagation();
+            const value = item.dataset.value;
+
+            // Optimistic UI update
+            dropdown.textContent = value;
+            menu?.classList.remove('open');
+
+            // API call to update
+            try {
+              if (dropdownType === 'status') {
+                await api(`/tasks/${taskId}`, {
+                  method: 'PATCH',
+                  body: JSON.stringify({ status: value.replace(' ', '_') })
+                });
+              } else if (dropdownType === 'priority') {
+                await api(`/tasks/${taskId}`, {
+                  method: 'PATCH',
+                  body: JSON.stringify({ priority: value })
+                });
+              } else if (dropdownType === 'assigned') {
+                await api(`/tasks/${taskId}`, {
+                  method: 'PATCH',
+                  body: JSON.stringify({ assigned_to: value })
+                });
+              } else if (dropdownType === 'project') {
+                await api(`/tasks/${taskId}`, {
+                  method: 'PATCH',
+                  body: JSON.stringify({ project_id: value })
+                });
+              }
+              await fetchData();
+              renderDetailPanel(taskId);
+            } catch (err) {
+              console.error('Failed to update task:', err);
+              // Revert UI on error
+              await fetchData();
+              renderDetailPanel(taskId);
+            }
+          });
+        });
+      });
+
+      // Click outside to close dropdowns
+      document.addEventListener('click', (e) => {
+        if (!e.target.closest('.dp-dropdown-container')) {
+          document.querySelectorAll('.dp-dropdown-menu').forEach(m => m.classList.remove('open'));
+        }
+      }, { capture: true });
+
       // Back button
       document.getElementById('dp-back')?.addEventListener('click', () => {
         const panel = document.getElementById('detail-panel');
