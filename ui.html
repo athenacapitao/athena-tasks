@@ -1967,6 +1967,16 @@
           api('/tasks')
         ]);
 
+        // Check if data actually changed (P3-15: avoid flicker)
+        const projectsChanged = JSON.stringify(projects) !== JSON.stringify(state.projects);
+        const tasksChanged = JSON.stringify(tasks) !== JSON.stringify(state.tasks);
+
+        if (!projectsChanged && !tasksChanged) {
+          // Only update sync time, don't re-render
+          state.lastSync = Date.now();
+          return;
+        }
+
         state.projects = projects;
         state.tasks = tasks;
         state.lastSync = Date.now();
@@ -2073,7 +2083,19 @@
     }
 
     // ── Sync Timer ──
-    setInterval(() => { if (state.lastSync) renderFooter(); }, 5000);
+    setInterval(() => { if (state.lastSync) renderFooter(); }, 1000);
+
+    // Auto-refresh polling (P3-15)
+    setInterval(async () => {
+      // Only poll when document is visible
+      if (document.hidden) return;
+
+      try {
+        await fetchData();
+      } catch (err) {
+        console.error('Auto-refresh failed:', err);
+      }
+    }, 5000);
 
     // ── Event Listeners ──
     document.addEventListener('DOMContentLoaded', () => {
