@@ -1,0 +1,61 @@
+[
+  {
+    "id": "t_1771044603921_c524ac",
+    "title": "Archive test task - 31 days old",
+    "description": null,
+    "project_id": "proj_personal",
+    "status": "done",
+    "priority": "low",
+    "assigned_to": "athena",
+    "created_by": "wilson",
+    "tags": [
+      "archive-test"
+    ],
+    "deadline": null,
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-14T04:50:03.921Z",
+    "updated_at": "2026-02-14T04:50:04.049Z",
+    "completed_at": "2026-01-14T04:50:04.108210Z",
+    "report": {
+      "summary": "Test task for archiving",
+      "files_changed": [],
+      "time_spent_minutes": null,
+      "verified": true,
+      "verified_at": "2026-02-14T04:50:04.049Z",
+      "verification_notes": null
+    },
+    "activity": [
+      {
+        "at": "2026-02-14T04:50:03.921Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      },
+      {
+        "at": "2026-02-14T04:50:04.014Z",
+        "by": "wilson",
+        "action": "status_changed",
+        "detail": "backlog → in_progress"
+      },
+      {
+        "at": "2026-02-14T04:50:04.049Z",
+        "by": "athena",
+        "action": "completed",
+        "detail": "Test task for archiving"
+      }
+    ]
+  }
+]
