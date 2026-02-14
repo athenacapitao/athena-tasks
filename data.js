@@ -32,7 +32,7 @@ async function withData(filename, mutator) {
     const raw = fs.readFileSync(filePath, 'utf-8');
     const data = raw.trim() ? JSON.parse(raw) : [];
     const result = mutator(data);
-    fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf-8');
+    fs.writeFileSync(filePath, JSON.stringify(result, null, 2), 'utf-8');
     return result;
   } finally {
     await release();

@@ -146,5 +146,2398 @@
     ],
     "report": null,
     "archived_at": "2026-02-11T17:08:06.450Z"
+  },
+  {
+    "id": "t_1770925085247_d68663",
+    "title": "Integration test task",
+    "description": "Testing full API lifecycle",
+    "project_id": "proj_personal",
+    "status": "backlog",
+    "priority": "high",
+    "assigned_to": "athena",
+    "created_by": "wilson",
+    "tags": [
+      "testing",
+      "api"
+    ],
+    "subtasks": [
+      {
+        "id": "st_002",
+        "title": "test",
+        "done": false
+      },
+      {
+        "id": "st_003",
+        "title": "Test subtask 2",
+        "done": false
+      }
+    ],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-12T19:38:05.247Z",
+    "updated_at": "2026-02-12T19:38:05.585Z",
+    "completed_at": null,
+    "report": null,
+    "activity": [
+      {
+        "at": "2026-02-12T19:38:05.247Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      },
+      {
+        "at": "2026-02-12T19:38:05.379Z",
+        "by": "wilson",
+        "action": "status_changed",
+        "detail": "backlog → in_progress"
+      },
+      {
+        "at": "2026-02-12T19:38:05.481Z",
+        "by": "athena",
+        "action": "comment",
+        "detail": "Integration test in progress"
+      },
+      {
+        "at": "2026-02-12T19:38:05.508Z",
+        "by": "athena",
+        "action": "status_changed",
+        "detail": "in_progress → in_review"
+      },
+      {
+        "at": "2026-02-12T19:38:05.508Z",
+        "by": "athena",
+        "action": "verified",
+        "detail": "All tests passing"
+      },
+      {
+        "at": "2026-02-12T19:38:05.540Z",
+        "by": "athena",
+        "action": "completed",
+        "detail": "Integration test completed successfully"
+      },
+      {
+        "at": "2026-02-12T19:38:05.563Z",
+        "by": "wilson",
+        "action": "reopened",
+        "detail": "Testing reopen endpoint"
+      }
+    ],
+    "archived_at": "2026-02-12T19:38:05.604Z"
+  },
+  {
+    "id": "t_1770925619848_b17d2b",
+    "title": "Task to delete",
+    "description": "Will be archived",
+    "project_id": "proj_personal",
+    "status": "backlog",
+    "priority": "low",
+    "assigned_to": "shared",
+    "created_by": "wilson",
+    "tags": [],
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-12T19:46:59.848Z",
+    "updated_at": "2026-02-12T19:46:59.848Z",
+    "completed_at": null,
+    "report": null,
+    "activity": [
+      {
+        "at": "2026-02-12T19:46:59.848Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      }
+    ],
+    "archived_at": "2026-02-12T19:47:03.366Z"
+  },
+  {
+    "id": "t_1770926135217_f6ba18",
+    "title": "Integration test task",
+    "description": "Testing full API lifecycle",
+    "project_id": "proj_personal",
+    "status": "backlog",
+    "priority": "high",
+    "assigned_to": "athena",
+    "created_by": "wilson",
+    "tags": [
+      "testing",
+      "api"
+    ],
+    "subtasks": [
+      {
+        "id": "st_002",
+        "title": "test",
+        "done": false
+      },
+      {
+        "id": "st_003",
+        "title": "Test subtask 2",
+        "done": false
+      }
+    ],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-12T19:55:35.217Z",
+    "updated_at": "2026-02-12T19:55:35.550Z",
+    "completed_at": null,
+    "report": null,
+    "activity": [
+      {
+        "at": "2026-02-12T19:55:35.217Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      },
+      {
+        "at": "2026-02-12T19:55:35.352Z",
+        "by": "wilson",
+        "action": "status_changed",
+        "detail": "backlog → in_progress"
+      },
+      {
+        "at": "2026-02-12T19:55:35.469Z",
+        "by": "athena",
+        "action": "comment",
+        "detail": "Integration test in progress"
+      },
+      {
+        "at": "2026-02-12T19:55:35.489Z",
+        "by": "athena",
+        "action": "status_changed",
+        "detail": "in_progress → in_review"
+      },
+      {
+        "at": "2026-02-12T19:55:35.489Z",
+        "by": "athena",
+        "action": "verified",
+        "detail": "All tests passing"
+      },
+      {
+        "at": "2026-02-12T19:55:35.511Z",
+        "by": "athena",
+        "action": "completed",
+        "detail": "Integration test completed successfully"
+      },
+      {
+        "at": "2026-02-12T19:55:35.529Z",
+        "by": "wilson",
+        "action": "reopened",
+        "detail": "Testing reopen endpoint"
+      }
+    ],
+    "archived_at": "2026-02-12T19:55:35.572Z"
+  },
+  {
+    "id": "t_1770926164143_dab4aa",
+    "title": "Integration test task",
+    "description": "Testing full API lifecycle",
+    "project_id": "proj_personal",
+    "status": "backlog",
+    "priority": "high",
+    "assigned_to": "athena",
+    "created_by": "wilson",
+    "tags": [
+      "testing",
+      "api"
+    ],
+    "subtasks": [
+      {
+        "id": "st_002",
+        "title": "test",
+        "done": false
+      },
+      {
+        "id": "st_003",
+        "title": "Test subtask 2",
+        "done": false
+      }
+    ],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-12T19:56:04.143Z",
+    "updated_at": "2026-02-12T19:56:04.428Z",
+    "completed_at": null,
+    "report": null,
+    "activity": [
+      {
+        "at": "2026-02-12T19:56:04.143Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      },
+      {
+        "at": "2026-02-12T19:56:04.274Z",
+        "by": "wilson",
+        "action": "status_changed",
+        "detail": "backlog → in_progress"
+      },
+      {
+        "at": "2026-02-12T19:56:04.363Z",
+        "by": "athena",
+        "action": "comment",
+        "detail": "Integration test in progress"
+      },
+      {
+        "at": "2026-02-12T19:56:04.377Z",
+        "by": "athena",
+        "action": "status_changed",
+        "detail": "in_progress → in_review"
+      },
+      {
+        "at": "2026-02-12T19:56:04.377Z",
+        "by": "athena",
+        "action": "verified",
+        "detail": "All tests passing"
+      },
+      {
+        "at": "2026-02-12T19:56:04.392Z",
+        "by": "athena",
+        "action": "completed",
+        "detail": "Integration test completed successfully"
+      },
+      {
+        "at": "2026-02-12T19:56:04.411Z",
+        "by": "wilson",
+        "action": "reopened",
+        "detail": "Testing reopen endpoint"
+      }
+    ],
+    "archived_at": "2026-02-12T19:56:04.448Z"
+  },
+  {
+    "id": "t_1771005913452_0ce55e",
+    "title": "Phase3 Test Task",
+    "description": null,
+    "project_id": "proj_personal",
+    "status": "backlog",
+    "priority": "high",
+    "assigned_to": "wilson",
+    "created_by": "wilson",
+    "tags": [
+      "test"
+    ],
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-13T18:05:13.452Z",
+    "updated_at": "2026-02-13T18:05:31.519Z",
+    "completed_at": null,
+    "report": null,
+    "activity": [
+      {
+        "at": "2026-02-13T18:05:13.452Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      },
+      {
+        "at": "2026-02-13T18:05:17.424Z",
+        "by": "wilson",
+        "action": "status_changed",
+        "detail": "backlog → in_progress"
+      },
+      {
+        "at": "2026-02-13T18:05:24.023Z",
+        "by": "wilson",
+        "action": "comment",
+        "detail": "Test comment"
+      },
+      {
+        "at": "2026-02-13T18:05:27.369Z",
+        "by": "athena",
+        "action": "completed",
+        "detail": "Test complete"
+      },
+      {
+        "at": "2026-02-13T18:05:28.889Z",
+        "by": "wilson",
+        "action": "reopened",
+        "detail": "Testing"
+      }
+    ],
+    "archived_at": "2026-02-13T18:06:40.934Z"
+  },
+  {
+    "id": "t_1771006538601_1b11ef",
+    "title": "E2E Final Test",
+    "description": null,
+    "project_id": "proj_personal",
+    "status": "done",
+    "priority": "critical",
+    "assigned_to": "wilson",
+    "created_by": "wilson",
+    "tags": [
+      "e2e",
+      "final"
+    ],
+    "subtasks": [
+      {
+        "id": "st_001",
+        "title": "Verify UI loads",
+        "done": true
+      }
+    ],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-13T18:15:38.601Z",
+    "updated_at": "2026-02-13T18:15:38.877Z",
+    "completed_at": "2026-02-13T18:15:38.877Z",
+    "report": {
+      "summary": "E2E test complete",
+      "files_changed": [
+        "ui.html"
+      ],
+      "time_spent_minutes": 5,
+      "verified": true,
+      "verified_at": "2026-02-13T18:15:38.877Z",
+      "verification_notes": null
+    },
+    "activity": [
+      {
+        "at": "2026-02-13T18:15:38.601Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      },
+      {
+        "at": "2026-02-13T18:15:38.716Z",
+        "by": "wilson",
+        "action": "status_changed",
+        "detail": "backlog → in_progress"
+      },
+      {
+        "at": "2026-02-13T18:15:38.826Z",
+        "by": "wilson",
+        "action": "comment",
+        "detail": "Testing complete flow"
+      },
+      {
+        "at": "2026-02-13T18:15:38.877Z",
+        "by": "athena",
+        "action": "completed",
+        "detail": "E2E test complete"
+      }
+    ],
+    "archived_at": "2026-02-13T18:15:39.034Z"
+  },
+  {
+    "id": "t_1771006547499_6059b5",
+    "title": "Deadline Test Task",
+    "description": null,
+    "project_id": "proj_personal",
+    "status": "backlog",
+    "priority": "medium",
+    "assigned_to": "wilson",
+    "created_by": "wilson",
+    "tags": [],
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-13T18:15:47.499Z",
+    "updated_at": "2026-02-13T18:15:47.499Z",
+    "completed_at": null,
+    "report": null,
+    "activity": [
+      {
+        "at": "2026-02-13T18:15:47.499Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      }
+    ],
+    "archived_at": "2026-02-13T18:16:17.716Z"
+  },
+  {
+    "id": "t_1771006582634_fb7dc5",
+    "title": "E2E Final Test",
+    "description": null,
+    "project_id": "proj_personal",
+    "status": "done",
+    "priority": "critical",
+    "assigned_to": "wilson",
+    "created_by": "wilson",
+    "tags": [
+      "e2e",
+      "final"
+    ],
+    "deadline": "2026-02-20T00:00:00.000Z",
+    "subtasks": [
+      {
+        "id": "st_001",
+        "title": "Verify UI loads",
+        "done": true
+      }
+    ],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-13T18:16:22.634Z",
+    "updated_at": "2026-02-13T18:16:22.981Z",
+    "completed_at": "2026-02-13T18:16:22.981Z",
+    "report": {
+      "summary": "E2E test complete",
+      "files_changed": [
+        "ui.html"
+      ],
+      "time_spent_minutes": 5,
+      "verified": true,
+      "verified_at": "2026-02-13T18:16:22.981Z",
+      "verification_notes": null
+    },
+    "activity": [
+      {
+        "at": "2026-02-13T18:16:22.634Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      },
+      {
+        "at": "2026-02-13T18:16:22.789Z",
+        "by": "wilson",
+        "action": "status_changed",
+        "detail": "backlog → in_progress"
+      },
+      {
+        "at": "2026-02-13T18:16:22.935Z",
+        "by": "wilson",
+        "action": "comment",
+        "detail": "Testing complete flow"
+      },
+      {
+        "at": "2026-02-13T18:16:22.981Z",
+        "by": "athena",
+        "action": "completed",
+        "detail": "E2E test complete"
+      }
+    ],
+    "archived_at": "2026-02-13T18:16:23.155Z"
+  },
+  {
+    "id": "t_1771007489142_513d3e",
+    "title": "Research Node.js 22 LTS features",
+    "description": null,
+    "project_id": "proj_automation",
+    "status": "backlog",
+    "priority": "medium",
+    "assigned_to": "athena",
+    "created_by": "athena",
+    "tags": [
+      "research"
+    ],
+    "deadline": null,
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-13T18:31:29.142Z",
+    "updated_at": "2026-02-13T18:31:29.142Z",
+    "completed_at": null,
+    "report": null,
+    "activity": [
+      {
+        "at": "2026-02-13T18:31:29.142Z",
+        "by": "athena",
+        "action": "created",
+        "detail": null
+      }
+    ],
+    "archived_at": "2026-02-13T18:31:51.043Z"
+  },
+  {
+    "id": "t_1771007553750_d515ef",
+    "title": "P4-07 validation test",
+    "description": null,
+    "project_id": "proj_automation",
+    "status": "backlog",
+    "priority": "medium",
+    "assigned_to": "athena",
+    "created_by": "athena",
+    "tags": [
+      "test"
+    ],
+    "deadline": null,
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-13T18:32:33.750Z",
+    "updated_at": "2026-02-13T18:32:33.750Z",
+    "completed_at": null,
+    "report": null,
+    "activity": [
+      {
+        "at": "2026-02-13T18:32:33.750Z",
+        "by": "athena",
+        "action": "created",
+        "detail": null
+      }
+    ],
+    "archived_at": "2026-02-13T18:32:34.008Z"
+  },
+  {
+    "id": "t_1770922374821_866b46",
+    "title": "Integration test task",
+    "description": "Testing full API lifecycle",
+    "project_id": "proj_personal",
+    "status": "backlog",
+    "priority": "high",
+    "assigned_to": "athena",
+    "created_by": "wilson",
+    "tags": [
+      "testing",
+      "api"
+    ],
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-12T18:52:54.821Z",
+    "updated_at": "2026-02-12T18:52:54.821Z",
+    "completed_at": null,
+    "report": null,
+    "activity": [
+      {
+        "at": "2026-02-12T18:52:54.821Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      }
+    ],
+    "archived_at": "2026-02-13T19:27:35.350Z"
+  },
+  {
+    "id": "t_1770918828724_c08aad",
+    "title": "Integration test task",
+    "description": "Testing full API lifecycle",
+    "project_id": "proj_personal",
+    "status": "backlog",
+    "priority": "high",
+    "assigned_to": "athena",
+    "created_by": "wilson",
+    "tags": [
+      "testing",
+      "api"
+    ],
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-12T17:53:48.724Z",
+    "updated_at": "2026-02-12T19:34:33.018Z",
+    "completed_at": null,
+    "report": null,
+    "activity": [
+      {
+        "at": "2026-02-12T17:53:48.724Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      },
+      {
+        "at": "2026-02-12T19:34:21.467Z",
+        "by": "wilson",
+        "action": "status_changed",
+        "detail": "backlog → in_progress"
+      },
+      {
+        "at": "2026-02-12T19:34:32.986Z",
+        "by": "wilson",
+        "action": "status_changed",
+        "detail": "in_progress → blocked"
+      },
+      {
+        "at": "2026-02-12T19:34:33.018Z",
+        "by": "wilson",
+        "action": "status_changed",
+        "detail": "blocked → backlog"
+      }
+    ],
+    "archived_at": "2026-02-13T19:27:35.381Z"
+  },
+  {
+    "id": "t_1770918819014_fd6b0c",
+    "title": "Integration test task",
+    "description": "Testing full API lifecycle",
+    "project_id": "proj_personal",
+    "status": "backlog",
+    "priority": "high",
+    "assigned_to": "athena",
+    "created_by": "wilson",
+    "tags": [
+      "testing",
+      "api"
+    ],
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-12T17:53:39.014Z",
+    "updated_at": "2026-02-12T17:53:39.014Z",
+    "completed_at": null,
+    "report": null,
+    "activity": [
+      {
+        "at": "2026-02-12T17:53:39.014Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      }
+    ],
+    "archived_at": "2026-02-13T19:27:35.413Z"
+  },
+  {
+    "id": "t_1770904303596_16ec9d",
+    "title": "Verification test task",
+    "description": null,
+    "project_id": "proj_personal",
+    "status": "backlog",
+    "priority": "high",
+    "assigned_to": "athena",
+    "created_by": "wilson",
+    "tags": [
+      "verification"
+    ],
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-12T13:51:43.596Z",
+    "updated_at": "2026-02-12T13:51:43.596Z",
+    "completed_at": null,
+    "report": null,
+    "activity": [
+      {
+        "at": "2026-02-12T13:51:43.596Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      }
+    ],
+    "archived_at": "2026-02-13T19:27:35.454Z"
+  },
+  {
+    "id": "t_1770875959972_1a6c9a",
+    "title": "Test token verification",
+    "description": null,
+    "project_id": "proj_personal",
+    "status": "backlog",
+    "priority": "medium",
+    "assigned_to": "athena",
+    "created_by": "wilson",
+    "tags": [],
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-12T05:59:19.972Z",
+    "updated_at": "2026-02-12T05:59:19.972Z",
+    "completed_at": null,
+    "report": null,
+    "activity": [
+      {
+        "at": "2026-02-12T05:59:19.972Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      }
+    ],
+    "archived_at": "2026-02-13T19:27:35.489Z"
+  },
+  {
+    "id": "t_1771010882894_d0f713",
+    "title": "Critical priority — Check disk space usage",
+    "description": "Run df -h and save output to /home/athena/.openclaw/workspace/diskspace.txt",
+    "project_id": "proj_automation",
+    "status": "backlog",
+    "priority": "critical",
+    "assigned_to": "athena",
+    "created_by": "wilson",
+    "tags": [
+      "coding"
+    ],
+    "deadline": null,
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-13T19:28:02.894Z",
+    "updated_at": "2026-02-13T19:28:02.894Z",
+    "completed_at": null,
+    "report": null,
+    "activity": [
+      {
+        "at": "2026-02-13T19:28:02.894Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      }
+    ],
+    "archived_at": "2026-02-13T19:29:02.543Z"
+  },
+  {
+    "id": "t_1771010881836_7cb93e",
+    "title": "High priority — List all running systemd services",
+    "description": "Run systemctl list-units --type=service --state=running and save output to /home/athena/.openclaw/workspace/services.txt",
+    "project_id": "proj_automation",
+    "status": "backlog",
+    "priority": "high",
+    "assigned_to": "athena",
+    "created_by": "wilson",
+    "tags": [
+      "coding"
+    ],
+    "deadline": null,
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-13T19:28:01.836Z",
+    "updated_at": "2026-02-13T19:28:01.836Z",
+    "completed_at": null,
+    "report": null,
+    "activity": [
+      {
+        "at": "2026-02-13T19:28:01.836Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      }
+    ],
+    "archived_at": "2026-02-13T19:29:02.591Z"
+  },
+  {
+    "id": "t_1771010880773_fe8d00",
+    "title": "Low priority — Write a README for athena-tasks",
+    "description": "Write a brief README.md for the athena-tasks project at /home/athena/.openclaw/workspace/athena-tasks/README.md. Include: project name, what it does, how to start the server, API overview.",
+    "project_id": "proj_personal",
+    "status": "backlog",
+    "priority": "low",
+    "assigned_to": "athena",
+    "created_by": "wilson",
+    "tags": [
+      "document"
+    ],
+    "deadline": null,
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-13T19:28:00.773Z",
+    "updated_at": "2026-02-13T19:28:00.773Z",
+    "completed_at": null,
+    "report": null,
+    "activity": [
+      {
+        "at": "2026-02-13T19:28:00.773Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      }
+    ],
+    "archived_at": "2026-02-13T19:29:02.640Z"
+  },
+  {
+    "id": "t_1771010903016_7dc044",
+    "title": "Get API key from Wilson for Stripe integration",
+    "description": "Need the Stripe API key from Wilson to configure payment integration. Cannot proceed without it.",
+    "project_id": "proj_petvitaclub",
+    "status": "blocked",
+    "priority": "medium",
+    "assigned_to": "athena",
+    "created_by": "wilson",
+    "tags": [
+      "configuration"
+    ],
+    "deadline": null,
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-13T19:28:23.016Z",
+    "updated_at": "2026-02-13T20:01:48.237Z",
+    "completed_at": null,
+    "report": null,
+    "activity": [
+      {
+        "at": "2026-02-13T19:28:23.016Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      },
+      {
+        "at": "2026-02-13T20:01:29.610Z",
+        "by": "wilson",
+        "action": "status_changed",
+        "detail": "backlog → in_progress"
+      },
+      {
+        "at": "2026-02-13T20:01:35.257Z",
+        "by": "athena",
+        "action": "started",
+        "detail": "Checking Stripe API key requirement"
+      },
+      {
+        "at": "2026-02-13T20:01:42.190Z",
+        "by": "wilson",
+        "action": "status_changed",
+        "detail": "in_progress → blocked"
+      },
+      {
+        "at": "2026-02-13T20:01:48.237Z",
+        "by": "athena",
+        "action": "comment",
+        "detail": "Blocked: Requires Stripe API key from Wilson. Task cannot proceed without this input."
+      }
+    ],
+    "archived_at": "2026-02-13T23:15:29.730Z"
+  },
+  {
+    "id": "t_1770926164164_f909fa",
+    "title": "test",
+    "description": null,
+    "project_id": "proj_personal",
+    "status": "backlog",
+    "priority": "medium",
+    "assigned_to": "shared",
+    "created_by": "wilson",
+    "tags": [],
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-12T19:56:04.164Z",
+    "updated_at": "2026-02-12T19:56:04.164Z",
+    "completed_at": null,
+    "report": null,
+    "activity": [
+      {
+        "at": "2026-02-12T19:56:04.164Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      }
+    ],
+    "archived_at": "2026-02-13T23:15:29.767Z"
+  },
+  {
+    "id": "t_1770926135247_c13ae7",
+    "title": "test",
+    "description": null,
+    "project_id": "proj_personal",
+    "status": "backlog",
+    "priority": "medium",
+    "assigned_to": "shared",
+    "created_by": "wilson",
+    "tags": [],
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-12T19:55:35.247Z",
+    "updated_at": "2026-02-12T19:55:35.247Z",
+    "completed_at": null,
+    "report": null,
+    "activity": [
+      {
+        "at": "2026-02-12T19:55:35.247Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      }
+    ],
+    "archived_at": "2026-02-13T23:15:29.802Z"
+  },
+  {
+    "id": "t_1770925641184_b489bc",
+    "title": "Task in backlog",
+    "description": "For complete test",
+    "project_id": "proj_personal",
+    "status": "in_progress",
+    "priority": "medium",
+    "assigned_to": "shared",
+    "created_by": "wilson",
+    "tags": [],
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-12T19:47:21.184Z",
+    "updated_at": "2026-02-12T19:47:34.557Z",
+    "completed_at": null,
+    "report": null,
+    "activity": [
+      {
+        "at": "2026-02-12T19:47:21.184Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      },
+      {
+        "at": "2026-02-12T19:47:34.557Z",
+        "by": "wilson",
+        "action": "status_changed",
+        "detail": "backlog → in_progress"
+      }
+    ],
+    "archived_at": "2026-02-13T23:15:29.827Z"
+  },
+  {
+    "id": "t_1770925561835_05c9d0",
+    "title": "Low priority task",
+    "description": "Can wait",
+    "project_id": "proj_personal",
+    "status": "backlog",
+    "priority": "low",
+    "assigned_to": "shared",
+    "created_by": "wilson",
+    "tags": [],
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-12T19:46:01.835Z",
+    "updated_at": "2026-02-12T19:46:01.835Z",
+    "completed_at": null,
+    "report": null,
+    "activity": [
+      {
+        "at": "2026-02-12T19:46:01.835Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      }
+    ],
+    "archived_at": "2026-02-13T23:15:29.863Z"
+  },
+  {
+    "id": "t_1770925560522_fca432",
+    "title": "Critical bug fix",
+    "description": "Fix production issue",
+    "project_id": "proj_personal",
+    "status": "backlog",
+    "priority": "critical",
+    "assigned_to": "shared",
+    "created_by": "wilson",
+    "tags": [],
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-12T19:46:00.522Z",
+    "updated_at": "2026-02-12T19:46:00.522Z",
+    "completed_at": null,
+    "report": null,
+    "activity": [
+      {
+        "at": "2026-02-12T19:46:00.522Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      }
+    ],
+    "archived_at": "2026-02-13T23:15:29.903Z"
+  },
+  {
+    "id": "t_1770925559055_72b079",
+    "title": "Landing page redesign",
+    "description": "Update the landing page UI",
+    "project_id": "proj_personal",
+    "status": "backlog",
+    "priority": "high",
+    "assigned_to": "shared",
+    "created_by": "wilson",
+    "tags": [],
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-12T19:45:59.054Z",
+    "updated_at": "2026-02-12T19:45:59.054Z",
+    "completed_at": null,
+    "report": null,
+    "activity": [
+      {
+        "at": "2026-02-12T19:45:59.054Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      }
+    ],
+    "archived_at": "2026-02-13T23:15:29.930Z"
+  },
+  {
+    "id": "t_1770925085276_7d83ab",
+    "title": "test",
+    "description": null,
+    "project_id": "proj_personal",
+    "status": "backlog",
+    "priority": "medium",
+    "assigned_to": "shared",
+    "created_by": "wilson",
+    "tags": [],
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-12T19:38:05.276Z",
+    "updated_at": "2026-02-12T19:38:05.276Z",
+    "completed_at": null,
+    "report": null,
+    "activity": [
+      {
+        "at": "2026-02-12T19:38:05.276Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      }
+    ],
+    "archived_at": "2026-02-13T23:15:29.959Z"
+  },
+  {
+    "id": "t_1770922374841_bd8a2d",
+    "title": "test",
+    "description": null,
+    "project_id": "proj_personal",
+    "status": "backlog",
+    "priority": "medium",
+    "assigned_to": "shared",
+    "created_by": "wilson",
+    "tags": [],
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-12T18:52:54.841Z",
+    "updated_at": "2026-02-12T18:52:54.841Z",
+    "completed_at": null,
+    "report": null,
+    "activity": [
+      {
+        "at": "2026-02-12T18:52:54.841Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      }
+    ],
+    "archived_at": "2026-02-13T23:15:29.981Z"
+  },
+  {
+    "id": "t_1770920165212_255938",
+    "title": "P1-08: Validate SSH tunnel access from MacBook",
+    "description": "Verify MacBook can reach athena-tasks via Tailscale + SSH tunnel.",
+    "project_id": "proj_automation",
+    "status": "completed",
+    "priority": "high",
+    "assigned_to": "athena",
+    "created_by": "wilson",
+    "tags": [
+      "infrastructure",
+      "testing"
+    ],
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-12T18:16:05.212Z",
+    "updated_at": "2026-02-12T18:18:05.614Z",
+    "completed_at": "2026-02-12T18:18:05.614Z",
+    "report": "Server-side verified. MacBook tunnel test pending.",
+    "activity": [
+      {
+        "at": "2026-02-12T18:16:05.212Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      },
+      {
+        "at": "2026-02-12T18:18:05.614Z",
+        "by": "athena",
+        "action": "completed",
+        "detail": "Phase 1 audit: acceptance criteria met."
+      }
+    ],
+    "archived_at": "2026-02-13T23:15:30.010Z"
+  },
+  {
+    "id": "t_1770920165129_2ed5a8",
+    "title": "P1-07: Create systemd user unit for process management",
+    "description": "Systemd user service for auto-start, crash restart, managed via systemctl.",
+    "project_id": "proj_automation",
+    "status": "completed",
+    "priority": "high",
+    "assigned_to": "athena",
+    "created_by": "wilson",
+    "tags": [
+      "infrastructure",
+      "devops"
+    ],
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-12T18:16:05.129Z",
+    "updated_at": "2026-02-12T18:18:05.614Z",
+    "completed_at": "2026-02-12T18:18:05.614Z",
+    "report": "Systemd active 11+ hours, enabled, linger on.",
+    "activity": [
+      {
+        "at": "2026-02-12T18:16:05.129Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      },
+      {
+        "at": "2026-02-12T18:18:05.614Z",
+        "by": "athena",
+        "action": "completed",
+        "detail": "Phase 1 audit: acceptance criteria met."
+      }
+    ],
+    "archived_at": "2026-02-13T23:15:30.049Z"
+  },
+  {
+    "id": "t_1770920165036_3d373a",
+    "title": "P1-06: Create placeholder UI (ui.html)",
+    "description": "Minimal ui.html with dark theme. Evolved to full production UI.",
+    "project_id": "proj_automation",
+    "status": "completed",
+    "priority": "medium",
+    "assigned_to": "athena",
+    "created_by": "wilson",
+    "tags": [
+      "frontend",
+      "ui"
+    ],
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-12T18:16:05.036Z",
+    "updated_at": "2026-02-12T18:18:05.614Z",
+    "completed_at": "2026-02-12T18:18:05.614Z",
+    "report": "Dark theme UI built, evolved beyond placeholder.",
+    "activity": [
+      {
+        "at": "2026-02-12T18:16:05.036Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      },
+      {
+        "at": "2026-02-12T18:18:05.614Z",
+        "by": "athena",
+        "action": "completed",
+        "detail": "Phase 1 audit: acceptance criteria met."
+      }
+    ],
+    "archived_at": "2026-02-13T23:15:30.096Z"
+  },
+  {
+    "id": "t_1770920164963_e13ded",
+    "title": "P1-05: Build Express server with health endpoint",
+    "description": "Create server.js — loads .env manually, Express app, GET /api/health, bound to 127.0.0.1.",
+    "project_id": "proj_automation",
+    "status": "completed",
+    "priority": "critical",
+    "assigned_to": "athena",
+    "created_by": "wilson",
+    "tags": [
+      "backend",
+      "server"
+    ],
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-12T18:16:04.963Z",
+    "updated_at": "2026-02-12T18:18:05.614Z",
+    "completed_at": "2026-02-12T18:18:05.614Z",
+    "report": "Express bound to 127.0.0.1, health returns ok.",
+    "activity": [
+      {
+        "at": "2026-02-12T18:16:04.963Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      },
+      {
+        "at": "2026-02-12T18:18:05.614Z",
+        "by": "athena",
+        "action": "completed",
+        "detail": "Phase 1 audit: acceptance criteria met."
+      }
+    ],
+    "archived_at": "2026-02-13T23:15:30.127Z"
+  },
+  {
+    "id": "t_1770920164867_306bc8",
+    "title": "P1-04: Seed data files (tasks.json, projects.json)",
+    "description": "Create initial data files: empty tasks array and 4 starter projects.",
+    "project_id": "proj_automation",
+    "status": "completed",
+    "priority": "critical",
+    "assigned_to": "athena",
+    "created_by": "wilson",
+    "tags": [
+      "setup",
+      "data"
+    ],
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-12T18:16:04.867Z",
+    "updated_at": "2026-02-12T18:18:05.614Z",
+    "completed_at": "2026-02-12T18:18:05.614Z",
+    "report": "4 projects match spec, tasks.json valid.",
+    "activity": [
+      {
+        "at": "2026-02-12T18:16:04.867Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      },
+      {
+        "at": "2026-02-12T18:18:05.614Z",
+        "by": "athena",
+        "action": "completed",
+        "detail": "Phase 1 audit: acceptance criteria met."
+      }
+    ],
+    "archived_at": "2026-02-13T23:15:30.165Z"
+  },
+  {
+    "id": "t_1770920164781_8a7a06",
+    "title": "P1-03: Implement data layer with file locking",
+    "description": "Build data.js with readData() and withData() using proper-lockfile for atomic read-modify-write.",
+    "project_id": "proj_automation",
+    "status": "completed",
+    "priority": "critical",
+    "assigned_to": "athena",
+    "created_by": "wilson",
+    "tags": [
+      "backend",
+      "data"
+    ],
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-12T18:16:04.781Z",
+    "updated_at": "2026-02-12T18:18:05.614Z",
+    "completed_at": "2026-02-12T18:18:05.614Z",
+    "report": "data.js with readData/withData, proper-lockfile, try/finally.",
+    "activity": [
+      {
+        "at": "2026-02-12T18:16:04.781Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      },
+      {
+        "at": "2026-02-12T18:18:05.614Z",
+        "by": "athena",
+        "action": "completed",
+        "detail": "Phase 1 audit: acceptance criteria met."
+      }
+    ],
+    "archived_at": "2026-02-13T23:15:30.207Z"
+  },
+  {
+    "id": "t_1770920164677_3d8058",
+    "title": "P1-02: Create .env configuration file",
+    "description": "Create .env with PORT=7700 and 32-byte hex auth token. Permissions 600.",
+    "project_id": "proj_automation",
+    "status": "completed",
+    "priority": "critical",
+    "assigned_to": "athena",
+    "created_by": "wilson",
+    "tags": [
+      "setup",
+      "security"
+    ],
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-12T18:16:04.677Z",
+    "updated_at": "2026-02-12T18:18:05.614Z",
+    "completed_at": "2026-02-12T18:18:05.614Z",
+    "report": ".env with PORT=7700, 64-char token, perms 600.",
+    "activity": [
+      {
+        "at": "2026-02-12T18:16:04.677Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      },
+      {
+        "at": "2026-02-12T18:18:05.614Z",
+        "by": "athena",
+        "action": "completed",
+        "detail": "Phase 1 audit: acceptance criteria met."
+      }
+    ],
+    "archived_at": "2026-02-13T23:15:30.250Z"
+  },
+  {
+    "id": "t_1770920164575_d2f96f",
+    "title": "P1-01: Initialize project directory and package.json",
+    "description": "Create project dir at /home/athena/.openclaw/workspace/athena-tasks/, init package.json with express and proper-lockfile.",
+    "project_id": "proj_automation",
+    "status": "completed",
+    "priority": "critical",
+    "assigned_to": "athena",
+    "created_by": "wilson",
+    "tags": [
+      "setup",
+      "infrastructure"
+    ],
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-12T18:16:04.575Z",
+    "updated_at": "2026-02-12T18:18:05.614Z",
+    "completed_at": "2026-02-12T18:18:05.614Z",
+    "report": "All dirs, deps, structure verified.",
+    "activity": [
+      {
+        "at": "2026-02-12T18:16:04.575Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      },
+      {
+        "at": "2026-02-12T18:18:05.614Z",
+        "by": "athena",
+        "action": "completed",
+        "detail": "Phase 1 audit: acceptance criteria met."
+      }
+    ],
+    "archived_at": "2026-02-13T23:15:30.291Z"
+  },
+  {
+    "id": "t_1770918828755_657955",
+    "title": "test",
+    "description": null,
+    "project_id": "proj_personal",
+    "status": "backlog",
+    "priority": "medium",
+    "assigned_to": "shared",
+    "created_by": "wilson",
+    "tags": [],
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-12T17:53:48.755Z",
+    "updated_at": "2026-02-12T17:53:48.755Z",
+    "completed_at": null,
+    "report": null,
+    "activity": [
+      {
+        "at": "2026-02-12T17:53:48.755Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      }
+    ],
+    "archived_at": "2026-02-13T23:15:30.332Z"
+  },
+  {
+    "id": "t_1770918819044_d8a5d7",
+    "title": "test",
+    "description": null,
+    "project_id": "proj_personal",
+    "status": "backlog",
+    "priority": "medium",
+    "assigned_to": "shared",
+    "created_by": "wilson",
+    "tags": [],
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-12T17:53:39.044Z",
+    "updated_at": "2026-02-12T17:53:39.044Z",
+    "completed_at": null,
+    "report": null,
+    "activity": [
+      {
+        "at": "2026-02-12T17:53:39.044Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      }
+    ],
+    "archived_at": "2026-02-13T23:15:30.372Z"
+  },
+  {
+    "id": "t_1770778197860_78dd37",
+    "title": "Test task",
+    "description": null,
+    "project_id": "proj_personal",
+    "status": "backlog",
+    "priority": "medium",
+    "assigned_to": "shared",
+    "created_by": "wilson",
+    "tags": [],
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-11T02:49:57.860Z",
+    "updated_at": "2026-02-11T02:49:57.860Z",
+    "completed_at": null,
+    "report": null,
+    "activity": [
+      {
+        "at": "2026-02-11T02:49:57.860Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      }
+    ],
+    "archived_at": "2026-02-13T23:15:30.412Z"
+  },
+  {
+    "id": "t_1771042357711_08cf42",
+    "title": "[TEST P6-05] High-priority notification test",
+    "description": "Test task to verify high-priority completion triggers Telegram notification",
+    "project_id": "proj_automation",
+    "status": "done",
+    "priority": "high",
+    "assigned_to": "athena",
+    "created_by": "wilson",
+    "tags": [
+      "testing"
+    ],
+    "deadline": null,
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-14T04:12:37.711Z",
+    "updated_at": "2026-02-14T04:12:43.930Z",
+    "completed_at": "2026-02-14T04:12:43.930Z",
+    "report": {
+      "summary": "Test task completed for P6-05 notification verification.",
+      "files_changed": [],
+      "time_spent_minutes": 1,
+      "verified": true,
+      "verified_at": "2026-02-14T04:12:43.930Z",
+      "verification_notes": "Test task"
+    },
+    "activity": [
+      {
+        "at": "2026-02-14T04:12:37.711Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      },
+      {
+        "at": "2026-02-14T04:12:43.900Z",
+        "by": "wilson",
+        "action": "status_changed",
+        "detail": "backlog → in_progress"
+      },
+      {
+        "at": "2026-02-14T04:12:43.930Z",
+        "by": "athena",
+        "action": "completed",
+        "detail": "Test task completed for P6-05 notification verification."
+      }
+    ],
+    "archived_at": "2026-02-14T04:14:54.052Z"
+  },
+  {
+    "id": "t_1771042373922_8a8a47",
+    "title": "[TEST P6-06] Blocked notification test",
+    "description": "Test task to verify blocked status triggers Telegram notification",
+    "project_id": "proj_automation",
+    "status": "blocked",
+    "priority": "medium",
+    "assigned_to": "athena",
+    "created_by": "wilson",
+    "tags": [
+      "testing"
+    ],
+    "deadline": null,
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-14T04:12:53.922Z",
+    "updated_at": "2026-02-14T04:12:59.285Z",
+    "completed_at": null,
+    "report": null,
+    "activity": [
+      {
+        "at": "2026-02-14T04:12:53.922Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      },
+      {
+        "at": "2026-02-14T04:12:59.240Z",
+        "by": "wilson",
+        "action": "status_changed",
+        "detail": "backlog → in_progress"
+      },
+      {
+        "at": "2026-02-14T04:12:59.259Z",
+        "by": "wilson",
+        "action": "status_changed",
+        "detail": "in_progress → blocked"
+      },
+      {
+        "at": "2026-02-14T04:12:59.285Z",
+        "by": "athena",
+        "action": "comment",
+        "detail": "Blocked: Missing external dependency for P6-06 test"
+      }
+    ],
+    "archived_at": "2026-02-14T04:14:54.075Z"
+  },
+  {
+    "id": "t_1771042388674_9163ba",
+    "title": "[TEST P6-07] Medium-priority no-notify test",
+    "description": null,
+    "project_id": "proj_automation",
+    "status": "done",
+    "priority": "medium",
+    "assigned_to": "athena",
+    "created_by": "wilson",
+    "tags": [
+      "testing"
+    ],
+    "deadline": null,
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-14T04:13:08.674Z",
+    "updated_at": "2026-02-14T04:13:18.230Z",
+    "completed_at": "2026-02-14T04:13:18.230Z",
+    "report": {
+      "summary": "Medium-priority test completed. No notification expected.",
+      "files_changed": [],
+      "time_spent_minutes": 1,
+      "verified": true,
+      "verified_at": "2026-02-14T04:13:18.230Z",
+      "verification_notes": null
+    },
+    "activity": [
+      {
+        "at": "2026-02-14T04:13:08.674Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      },
+      {
+        "at": "2026-02-14T04:13:18.189Z",
+        "by": "wilson",
+        "action": "status_changed",
+        "detail": "backlog → in_progress"
+      },
+      {
+        "at": "2026-02-14T04:13:18.230Z",
+        "by": "athena",
+        "action": "completed",
+        "detail": "Medium-priority test completed. No notification expected."
+      }
+    ],
+    "archived_at": "2026-02-14T04:14:54.102Z"
+  },
+  {
+    "id": "t_1771042410009_877c48",
+    "title": "[TEST P6-08] Critical overdue quiet-hours bypass",
+    "description": "Critical overdue task to test quiet-hours exception",
+    "project_id": "proj_automation",
+    "status": "backlog",
+    "priority": "critical",
+    "assigned_to": "athena",
+    "created_by": "wilson",
+    "tags": [
+      "testing"
+    ],
+    "deadline": "2026-02-13T00:00:00.000Z",
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-14T04:13:30.009Z",
+    "updated_at": "2026-02-14T04:13:30.009Z",
+    "completed_at": null,
+    "report": null,
+    "activity": [
+      {
+        "at": "2026-02-14T04:13:30.009Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      }
+    ],
+    "archived_at": "2026-02-14T04:14:54.127Z"
+  },
+  {
+    "id": "t_1771044931711_b783be",
+    "title": "Update the PetVitaClub FAQ page",
+    "description": "Hi Athena, can you update the FAQ page on petvitaclub.com? Add questions about shipping times and return policy. This is needed by end of week.\n\n---\nSource: Email from wilson@capitao.consulting on 2026-02-14",
+    "project_id": "proj_petvitaclub",
+    "status": "backlog",
+    "priority": "medium",
+    "assigned_to": "athena",
+    "created_by": "email",
+    "tags": [
+      "auto-email",
+      "content"
+    ],
+    "deadline": null,
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-14T04:55:31.711Z",
+    "updated_at": "2026-02-14T04:55:31.711Z",
+    "completed_at": null,
+    "report": null,
+    "activity": [
+      {
+        "at": "2026-02-14T04:55:31.711Z",
+        "by": "email",
+        "action": "created",
+        "detail": null
+      }
+    ],
+    "archived_at": "2026-02-14T04:55:31.850Z"
+  },
+  {
+    "id": "t_1771044959488_aa293a",
+    "title": "Update the PetVitaClub FAQ page",
+    "description": "Hi Athena, can you update the FAQ page on petvitaclub.com? Add questions about shipping times and return policy. This is needed by end of week.\n\n---\nSource: Email from wilson@capitao.consulting on 2026-02-14",
+    "project_id": "proj_petvitaclub",
+    "status": "backlog",
+    "priority": "medium",
+    "assigned_to": "athena",
+    "created_by": "email",
+    "tags": [
+      "auto-email",
+      "content"
+    ],
+    "deadline": null,
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "email",
+      "sender": "wilson@capitao.consulting",
+      "subject": "Please update the PetVitaClub FAQ page",
+      "received_at": "2026-02-14T10:30:00Z",
+      "raw_excerpt": "Hi Athena, can you update the FAQ page on petvitaclub.com? Add questions about shipping times and return policy."
+    },
+    "created_at": "2026-02-14T04:55:59.488Z",
+    "updated_at": "2026-02-14T04:55:59.488Z",
+    "completed_at": null,
+    "report": null,
+    "activity": [
+      {
+        "at": "2026-02-14T04:55:59.488Z",
+        "by": "email",
+        "action": "created",
+        "detail": null
+      }
+    ],
+    "archived_at": "2026-02-14T04:55:59.642Z"
+  },
+  {
+    "id": "t_1771071279328_564b45",
+    "title": "Link validation test",
+    "description": null,
+    "project_id": "proj_personal",
+    "status": "backlog",
+    "priority": "medium",
+    "assigned_to": "shared",
+    "created_by": "wilson",
+    "tags": [],
+    "deadline": null,
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": "https://docs.google.com/document/d/abc",
+      "email_thread": "/home/athena/threads/test"
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-14T12:14:39.328Z",
+    "updated_at": "2026-02-14T12:14:39.665Z",
+    "completed_at": null,
+    "report": null,
+    "activity": [
+      {
+        "at": "2026-02-14T12:14:39.328Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      }
+    ],
+    "archived_at": "2026-02-14T12:15:27.755Z"
+  },
+  {
+    "id": "t_1771071259159_5c0469",
+    "title": "Regression test task P10",
+    "description": null,
+    "project_id": "proj_automation",
+    "status": "done",
+    "priority": "high",
+    "assigned_to": "athena",
+    "created_by": "wilson",
+    "tags": [
+      "coding"
+    ],
+    "deadline": null,
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-14T12:14:19.159Z",
+    "updated_at": "2026-02-14T12:14:19.398Z",
+    "completed_at": "2026-02-14T12:14:19.398Z",
+    "report": {
+      "summary": "Test passed",
+      "files_changed": [
+        "server.js"
+      ],
+      "time_spent_minutes": 1,
+      "verified": true,
+      "verified_at": "2026-02-14T12:14:19.398Z",
+      "verification_notes": null
+    },
+    "activity": [
+      {
+        "at": "2026-02-14T12:14:19.159Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      },
+      {
+        "at": "2026-02-14T12:14:19.303Z",
+        "by": "wilson",
+        "action": "status_changed",
+        "detail": "backlog → in_progress"
+      },
+      {
+        "at": "2026-02-14T12:14:19.398Z",
+        "by": "athena",
+        "action": "completed",
+        "detail": "Test passed"
+      }
+    ],
+    "archived_at": "2026-02-14T12:15:27.800Z"
+  },
+  {
+    "id": "t_1771071243437_cf8558",
+    "title": "Subtask test task",
+    "description": null,
+    "project_id": "proj_personal",
+    "status": "backlog",
+    "priority": "low",
+    "assigned_to": "shared",
+    "created_by": "wilson",
+    "tags": [],
+    "deadline": null,
+    "subtasks": [
+      {
+        "id": "st_001",
+        "title": "Test subtask",
+        "done": false
+      }
+    ],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-14T12:14:03.437Z",
+    "updated_at": "2026-02-14T12:14:03.555Z",
+    "completed_at": null,
+    "report": null,
+    "activity": [
+      {
+        "at": "2026-02-14T12:14:03.437Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      }
+    ],
+    "archived_at": "2026-02-14T12:15:27.858Z"
+  },
+  {
+    "id": "t_1771071242369_3e886e",
+    "title": "Regression test task",
+    "description": null,
+    "project_id": "proj_automation",
+    "status": "done",
+    "priority": "high",
+    "assigned_to": "athena",
+    "created_by": "wilson",
+    "tags": [
+      "coding"
+    ],
+    "deadline": null,
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-14T12:14:02.369Z",
+    "updated_at": "2026-02-14T12:14:03.197Z",
+    "completed_at": "2026-02-14T12:14:03.197Z",
+    "report": {
+      "summary": "Regression test passed",
+      "files_changed": [
+        "server.js"
+      ],
+      "time_spent_minutes": 1,
+      "verified": true,
+      "verified_at": "2026-02-14T12:14:03.197Z",
+      "verification_notes": null
+    },
+    "activity": [
+      {
+        "at": "2026-02-14T12:14:02.369Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      },
+      {
+        "at": "2026-02-14T12:14:02.891Z",
+        "by": "wilson",
+        "action": "status_changed",
+        "detail": "backlog → in_progress"
+      },
+      {
+        "at": "2026-02-14T12:14:03.197Z",
+        "by": "athena",
+        "action": "completed",
+        "detail": "Regression test passed"
+      }
+    ],
+    "archived_at": "2026-02-14T12:15:27.900Z"
+  },
+  {
+    "id": "t_1771072900681_ccb57e",
+    "title": "Email link test",
+    "description": null,
+    "project_id": "proj_personal",
+    "status": "backlog",
+    "priority": "medium",
+    "assigned_to": "shared",
+    "created_by": "wilson",
+    "tags": [],
+    "deadline": null,
+    "subtasks": [],
+    "links": {
+      "github_issue": "https://github.com/test/repo/issues/1",
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-14T12:41:40.681Z",
+    "updated_at": "2026-02-14T12:41:40.927Z",
+    "completed_at": null,
+    "report": null,
+    "activity": [
+      {
+        "at": "2026-02-14T12:41:40.681Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      }
+    ],
+    "archived_at": "2026-02-14T12:41:41.097Z"
   }
 ]

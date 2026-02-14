@@ -1,10 +1,10 @@
 [
   {
-    "id": "t_1770778197860_78dd37",
-    "title": "Test task",
-    "description": null,
+    "id": "t_1770925556987_738550",
+    "title": "Test task for default GET",
+    "description": "Should be excluded when done",
     "project_id": "proj_personal",
-    "status": "backlog",
+    "status": "done",
     "priority": "medium",
     "assigned_to": "shared",
     "created_by": "wilson",
@@ -23,13 +23,1253 @@
       "received_at": null,
       "raw_excerpt": null
     },
-    "created_at": "2026-02-11T02:49:57.860Z",
-    "updated_at": "2026-02-11T02:49:57.860Z",
+    "created_at": "2026-02-12T19:45:56.986Z",
+    "updated_at": "2026-02-12T19:46:11.178Z",
+    "completed_at": "2026-02-12T19:46:11.178Z",
+    "report": {
+      "summary": "Task completed for test",
+      "files_changed": [],
+      "time_spent_minutes": null,
+      "verified": false,
+      "verified_at": null,
+      "verification_notes": null
+    },
+    "activity": [
+      {
+        "at": "2026-02-12T19:45:56.986Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      },
+      {
+        "at": "2026-02-12T19:46:05.977Z",
+        "by": "wilson",
+        "action": "status_changed",
+        "detail": "backlog → in_progress"
+      },
+      {
+        "at": "2026-02-12T19:46:11.178Z",
+        "by": "athena",
+        "action": "completed",
+        "detail": "Task completed for test"
+      }
+    ]
+  },
+  {
+    "id": "t_1770925598626_555ad7",
+    "title": "Test P2-05",
+    "description": "For status transition test",
+    "project_id": "proj_personal",
+    "status": "done",
+    "priority": "medium",
+    "assigned_to": "shared",
+    "created_by": "wilson",
+    "tags": [],
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-12T19:46:38.626Z",
+    "updated_at": "2026-02-12T19:46:44.880Z",
+    "completed_at": "2026-02-12T19:46:44.880Z",
+    "report": {
+      "summary": "Completed for test",
+      "files_changed": [],
+      "time_spent_minutes": null,
+      "verified": false,
+      "verified_at": null,
+      "verification_notes": null
+    },
+    "activity": [
+      {
+        "at": "2026-02-12T19:46:38.626Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      },
+      {
+        "at": "2026-02-12T19:46:41.793Z",
+        "by": "wilson",
+        "action": "status_changed",
+        "detail": "backlog → in_progress"
+      },
+      {
+        "at": "2026-02-12T19:46:44.880Z",
+        "by": "athena",
+        "action": "completed",
+        "detail": "Completed for test"
+      }
+    ]
+  },
+  {
+    "id": "t_1771009856814_762f7a",
+    "title": "Send email to Wilson",
+    "description": "send an email to wilsoncapitao@gmail.com saying \"hi\"",
+    "project_id": "proj_personal",
+    "status": "done",
+    "priority": "medium",
+    "assigned_to": "athena",
+    "created_by": "wilson",
+    "tags": [
+      "email",
+      "communication"
+    ],
+    "deadline": null,
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-13T19:10:56.814Z",
+    "updated_at": "2026-02-13T19:11:52.721Z",
+    "completed_at": "2026-02-13T19:11:52.721Z",
+    "report": {
+      "summary": "Email sent to Wilson",
+      "files_changed": [],
+      "time_spent_minutes": null,
+      "verified": false,
+      "verified_at": null,
+      "verification_notes": null
+    },
+    "activity": [
+      {
+        "at": "2026-02-13T19:10:56.814Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      },
+      {
+        "at": "2026-02-13T19:11:37.544Z",
+        "by": "wilson",
+        "action": "status_changed",
+        "detail": "backlog → in_progress"
+      },
+      {
+        "at": "2026-02-13T19:11:52.721Z",
+        "by": "athena",
+        "action": "completed",
+        "detail": "Email sent to Wilson"
+      }
+    ]
+  },
+  {
+    "id": "t_1771010867599_ed90af",
+    "title": "Low priority — Write a README for athena-tasks",
+    "description": "Write a brief README.md for the athena-tasks project at /home/athena/.openclaw/workspace/athena-tasks/README.md. Include: project name, what it does, how to start the server, API overview.",
+    "project_id": "proj_personal",
+    "status": "done",
+    "priority": "low",
+    "assigned_to": "athena",
+    "created_by": "wilson",
+    "tags": [
+      "document"
+    ],
+    "deadline": null,
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-13T19:27:47.599Z",
+    "updated_at": "2026-02-13T21:31:36.363Z",
+    "completed_at": "2026-02-13T21:31:36.363Z",
+    "report": {
+      "summary": "Created comprehensive README.md for athena-tasks project with all required sections. Document includes project overview, quick start guide, API documentation, and task worker integration details.",
+      "files_changed": [
+        "/home/athena/.openclaw/workspace/athena-tasks/README.md"
+      ],
+      "time_spent_minutes": 5,
+      "verified": true,
+      "verified_at": "2026-02-13T21:31:36.363Z",
+      "verification_notes": null
+    },
+    "activity": [
+      {
+        "at": "2026-02-13T19:27:47.599Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      },
+      {
+        "at": "2026-02-13T21:30:23.391Z",
+        "by": "wilson",
+        "action": "status_changed",
+        "detail": "backlog → in_progress"
+      },
+      {
+        "at": "2026-02-13T21:30:30.080Z",
+        "by": "athena",
+        "action": "started",
+        "detail": "Beginning work on README.md for athena-tasks project"
+      },
+      {
+        "at": "2026-02-13T21:31:14.799Z",
+        "by": "athena",
+        "action": "comment",
+        "detail": "Created comprehensive README.md with project overview, quick start, API documentation, and task worker integration"
+      },
+      {
+        "at": "2026-02-13T21:31:28.766Z",
+        "by": "athena",
+        "action": "status_changed",
+        "detail": "in_progress → in_review"
+      },
+      {
+        "at": "2026-02-13T21:31:28.766Z",
+        "by": "athena",
+        "action": "verified",
+        "detail": "README.md exists (3648 bytes), contains required sections: project name, what it does, how to start server, API overview"
+      },
+      {
+        "at": "2026-02-13T21:31:36.363Z",
+        "by": "athena",
+        "action": "completed",
+        "detail": "Created comprehensive README.md for athena-tasks project with all required sections. Document includes project overview, quick start guide, API documentation, and task worker integration details."
+      }
+    ]
+  },
+  {
+    "id": "t_1771010868691_60e34b",
+    "title": "High priority — List all running systemd services",
+    "description": "Run systemctl list-units --type=service --state=running and save to /home/athena/.openclaw/workspace/services.txt",
+    "project_id": "proj_automation",
+    "status": "done",
+    "priority": "high",
+    "assigned_to": "athena",
+    "created_by": "wilson",
+    "tags": [
+      "coding"
+    ],
+    "deadline": null,
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-13T19:27:48.691Z",
+    "updated_at": "2026-02-13T19:30:59.855Z",
     "completed_at": null,
     "report": null,
     "activity": [
       {
-        "at": "2026-02-11T02:49:57.860Z",
+        "at": "2026-02-13T19:27:48.691Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      },
+      {
+        "at": "2026-02-13T19:30:43.266Z",
+        "by": "wilson",
+        "action": "status_changed",
+        "detail": "backlog → in_progress"
+      },
+      {
+        "at": "2026-02-13T19:30:59.855Z",
+        "by": "wilson",
+        "action": "status_changed",
+        "detail": "in_progress → done"
+      }
+    ]
+  },
+  {
+    "id": "t_1771010869785_925fda",
+    "title": "Critical priority — Check disk space usage",
+    "description": "Run df -h and save to /home/athena/.openclaw/workspace/diskspace.txt",
+    "project_id": "proj_automation",
+    "status": "done",
+    "priority": "critical",
+    "assigned_to": "athena",
+    "created_by": "wilson",
+    "tags": [
+      "coding"
+    ],
+    "deadline": null,
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-13T19:27:49.785Z",
+    "updated_at": "2026-02-13T19:30:37.175Z",
+    "completed_at": null,
+    "report": null,
+    "activity": [
+      {
+        "at": "2026-02-13T19:27:49.785Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      },
+      {
+        "at": "2026-02-13T19:30:14.382Z",
+        "by": "wilson",
+        "action": "status_changed",
+        "detail": "backlog → in_progress"
+      },
+      {
+        "at": "2026-02-13T19:30:37.175Z",
+        "by": "wilson",
+        "action": "status_changed",
+        "detail": "in_progress → done"
+      }
+    ]
+  },
+  {
+    "id": "t_1771010902730_b5fb8d",
+    "title": "Write a haiku about task management",
+    "description": "Write a haiku (5-7-5 syllable) about task management. Save to /home/athena/.openclaw/workspace/haiku.txt",
+    "project_id": "proj_personal",
+    "status": "done",
+    "priority": "medium",
+    "assigned_to": "athena",
+    "created_by": "wilson",
+    "tags": [
+      "document"
+    ],
+    "deadline": null,
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-13T19:28:22.730Z",
+    "updated_at": "2026-02-13T20:01:16.853Z",
+    "completed_at": "2026-02-13T20:01:16.853Z",
+    "report": {
+      "summary": "Created haiku about task management with 5-7-5 syllable structure. File saved to workspace/haiku.txt.",
+      "files_changed": [
+        "/home/athena/.openclaw/workspace/haiku.txt"
+      ],
+      "time_spent_minutes": 2,
+      "verified": true,
+      "verified_at": "2026-02-13T20:01:16.853Z",
+      "verification_notes": "File verified: exists, correct format, on-topic"
+    },
+    "activity": [
+      {
+        "at": "2026-02-13T19:28:22.730Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      },
+      {
+        "at": "2026-02-13T20:00:22.223Z",
+        "by": "wilson",
+        "action": "status_changed",
+        "detail": "backlog → in_progress"
+      },
+      {
+        "at": "2026-02-13T20:00:28.295Z",
+        "by": "athena",
+        "action": "started",
+        "detail": "Beginning work on haiku about task management"
+      },
+      {
+        "at": "2026-02-13T20:00:54.511Z",
+        "by": "athena",
+        "action": "comment",
+        "detail": "Haiku written and saved to haiku.txt"
+      },
+      {
+        "at": "2026-02-13T20:01:08.870Z",
+        "by": "athena",
+        "action": "status_changed",
+        "detail": "in_progress → in_review"
+      },
+      {
+        "at": "2026-02-13T20:01:08.870Z",
+        "by": "athena",
+        "action": "verified",
+        "detail": "File exists (70 bytes), haiku format correct, topic matches task management"
+      },
+      {
+        "at": "2026-02-13T20:01:16.853Z",
+        "by": "athena",
+        "action": "completed",
+        "detail": "Created haiku about task management with 5-7-5 syllable structure. File saved to workspace/haiku.txt."
+      }
+    ]
+  },
+  {
+    "id": "t_1771010902780_468e54",
+    "title": "Create hello.py that prints system info",
+    "description": "Create /home/athena/.openclaw/workspace/hello.py that prints: hostname, OS, Python version, current time, disk usage. Must run without errors.",
+    "project_id": "proj_automation",
+    "status": "done",
+    "priority": "high",
+    "assigned_to": "athena",
+    "created_by": "wilson",
+    "tags": [
+      "coding"
+    ],
+    "deadline": null,
+    "subtasks": [
+      {
+        "id": "st_001",
+        "title": "Write the Python script",
+        "done": true
+      },
+      {
+        "id": "st_002",
+        "title": "Test that it runs without errors",
+        "done": true
+      },
+      {
+        "id": "st_003",
+        "title": "Verify output contains all 5 items",
+        "done": true
+      }
+    ],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-13T19:28:22.780Z",
+    "updated_at": "2026-02-14T03:34:32.095Z",
+    "completed_at": "2026-02-14T03:34:32.095Z",
+    "report": {
+      "summary": "Created hello.py script that prints system info: hostname, OS, Python version, current time, disk usage. Script runs without errors and outputs all 5 required items.",
+      "files_changed": [
+        "/home/athena/.openclaw/workspace/hello.py"
+      ],
+      "time_spent_minutes": 2,
+      "verified": true,
+      "verified_at": "2026-02-14T03:34:32.095Z",
+      "verification_notes": null
+    },
+    "activity": [
+      {
+        "at": "2026-02-13T19:28:22.780Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      },
+      {
+        "at": "2026-02-13T19:31:05.850Z",
+        "by": "wilson",
+        "action": "status_changed",
+        "detail": "backlog → in_progress"
+      },
+      {
+        "at": "2026-02-13T19:32:01.961Z",
+        "by": "wilson",
+        "action": "status_changed",
+        "detail": "in_progress → done"
+      },
+      {
+        "at": "2026-02-14T03:32:49.405Z",
+        "by": "athena",
+        "action": "status_changed",
+        "detail": "done → backlog (correcting incomplete subtasks)"
+      },
+      {
+        "at": "2026-02-14T03:33:03.115Z",
+        "by": "athena",
+        "action": "status_changed",
+        "detail": "backlog → in_progress"
+      },
+      {
+        "at": "2026-02-14T03:33:09.389Z",
+        "by": "athena",
+        "action": "started",
+        "detail": "Beginning work on hello.py script"
+      },
+      {
+        "at": "2026-02-14T03:33:37.759Z",
+        "by": "athena",
+        "action": "progress",
+        "detail": "Completed subtask 1: Python script written at /home/athena/.openclaw/workspace/hello.py"
+      },
+      {
+        "at": "2026-02-14T03:33:55.974Z",
+        "by": "athena",
+        "action": "progress",
+        "detail": "Completed subtask 2: Script runs without errors, output verified"
+      },
+      {
+        "at": "2026-02-14T03:34:12.588Z",
+        "by": "athena",
+        "action": "progress",
+        "detail": "Completed subtask 3: Output verified - contains all 5 required items (hostname, OS, Python version, current time, disk usage)"
+      },
+      {
+        "at": "2026-02-14T03:34:23.865Z",
+        "by": "athena",
+        "action": "status_changed",
+        "detail": "in_progress → in_review"
+      },
+      {
+        "at": "2026-02-14T03:34:23.865Z",
+        "by": "athena",
+        "action": "verified",
+        "detail": "Script created at /home/athena/.openclaw/workspace/hello.py, runs without errors, outputs all 5 required items: hostname, OS, Python version, current time, disk usage. All 3 subtasks completed."
+      },
+      {
+        "at": "2026-02-14T03:34:32.095Z",
+        "by": "athena",
+        "action": "completed",
+        "detail": "Created hello.py script that prints system info: hostname, OS, Python version, current time, disk usage. Script runs without errors and outputs all 5 required items."
+      }
+    ]
+  },
+  {
+    "id": "t_1771010903052_9bd5a5",
+    "title": "Create a script that outputs exactly 5 lines",
+    "description": "Create /home/athena/.openclaw/workspace/fivelines.py that prints exactly 5 lines, each line is a numbered fact about AI. Verify the output has exactly 5 lines using: python3 fivelines.py | wc -l (must output 5).",
+    "project_id": "proj_automation",
+    "status": "done",
+    "priority": "medium",
+    "assigned_to": "athena",
+    "created_by": "wilson",
+    "tags": [
+      "coding"
+    ],
+    "deadline": null,
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-13T19:28:23.051Z",
+    "updated_at": "2026-02-13T20:02:50.002Z",
+    "completed_at": "2026-02-13T20:02:50.002Z",
+    "report": {
+      "summary": "Created fivelines.py script that outputs 5 numbered AI facts. Verified output has exactly 5 lines using wc -l.",
+      "files_changed": [
+        "/home/athena/.openclaw/workspace/fivelines.py"
+      ],
+      "time_spent_minutes": 3,
+      "verified": true,
+      "verified_at": "2026-02-13T20:02:50.002Z",
+      "verification_notes": "python3 fivelines.py | wc -l outputs 5, each line numbered AI fact"
+    },
+    "activity": [
+      {
+        "at": "2026-02-13T19:28:23.051Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      },
+      {
+        "at": "2026-02-13T20:01:59.345Z",
+        "by": "wilson",
+        "action": "status_changed",
+        "detail": "backlog → in_progress"
+      },
+      {
+        "at": "2026-02-13T20:02:04.778Z",
+        "by": "athena",
+        "action": "started",
+        "detail": "Creating Python script that outputs 5 AI facts"
+      },
+      {
+        "at": "2026-02-13T20:02:28.304Z",
+        "by": "athena",
+        "action": "comment",
+        "detail": "Script created and tested: outputs exactly 5 lines about AI"
+      },
+      {
+        "at": "2026-02-13T20:02:41.736Z",
+        "by": "athena",
+        "action": "status_changed",
+        "detail": "in_progress → in_review"
+      },
+      {
+        "at": "2026-02-13T20:02:41.736Z",
+        "by": "athena",
+        "action": "verified",
+        "detail": "python3 fivelines.py | wc -l outputs 5. Each line is numbered AI fact as required."
+      },
+      {
+        "at": "2026-02-13T20:02:50.002Z",
+        "by": "athena",
+        "action": "completed",
+        "detail": "Created fivelines.py script that outputs 5 numbered AI facts. Verified output has exactly 5 lines using wc -l."
+      }
+    ]
+  },
+  {
+    "id": "t_1771010903105_8c93c3",
+    "title": "List files in workspace directory",
+    "description": "Run ls -la /home/athena/.openclaw/workspace/ and save to /home/athena/.openclaw/workspace/filelist.txt",
+    "project_id": "proj_automation",
+    "status": "done",
+    "priority": "medium",
+    "assigned_to": "athena",
+    "created_by": "wilson",
+    "tags": [
+      "coding"
+    ],
+    "deadline": null,
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-13T19:28:23.105Z",
+    "updated_at": "2026-02-13T20:30:45.478Z",
+    "completed_at": "2026-02-13T20:30:45.478Z",
+    "report": {
+      "summary": "Created filelist.txt with workspace directory listing. File contains 4286 bytes of detailed file information.",
+      "files_changed": [
+        "/home/athena/.openclaw/workspace/filelist.txt"
+      ],
+      "time_spent_minutes": 2,
+      "verified": true,
+      "verified_at": "2026-02-13T20:30:45.478Z",
+      "verification_notes": null
+    },
+    "activity": [
+      {
+        "at": "2026-02-13T19:28:23.105Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      },
+      {
+        "at": "2026-02-13T20:30:15.949Z",
+        "by": "wilson",
+        "action": "status_changed",
+        "detail": "backlog → in_progress"
+      },
+      {
+        "at": "2026-02-13T20:30:21.489Z",
+        "by": "athena",
+        "action": "started",
+        "detail": "Beginning work on listing workspace files"
+      },
+      {
+        "at": "2026-02-13T20:30:39.115Z",
+        "by": "athena",
+        "action": "status_changed",
+        "detail": "in_progress → in_review"
+      },
+      {
+        "at": "2026-02-13T20:30:39.115Z",
+        "by": "athena",
+        "action": "verified",
+        "detail": "File created successfully with 4286 bytes, contains directory listing"
+      },
+      {
+        "at": "2026-02-13T20:30:45.478Z",
+        "by": "athena",
+        "action": "completed",
+        "detail": "Created filelist.txt with workspace directory listing. File contains 4286 bytes of detailed file information."
+      }
+    ]
+  },
+  {
+    "id": "t_1771010911948_981db2",
+    "title": "Cron limit test 1",
+    "description": "Write one sentence to /home/athena/.openclaw/workspace/test-1.txt",
+    "project_id": "proj_personal",
+    "status": "done",
+    "priority": "medium",
+    "assigned_to": "athena",
+    "created_by": "wilson",
+    "tags": [
+      "document"
+    ],
+    "deadline": null,
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-13T19:28:31.948Z",
+    "updated_at": "2026-02-13T20:31:21.699Z",
+    "completed_at": "2026-02-13T20:31:21.699Z",
+    "report": {
+      "summary": "Created test-1.txt with one sentence about Task Worker cron job verification. File size is 89 bytes.",
+      "files_changed": [
+        "/home/athena/.openclaw/workspace/test-1.txt"
+      ],
+      "time_spent_minutes": 1,
+      "verified": true,
+      "verified_at": "2026-02-13T20:31:21.699Z",
+      "verification_notes": null
+    },
+    "activity": [
+      {
+        "at": "2026-02-13T19:28:31.948Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      },
+      {
+        "at": "2026-02-13T20:30:55.401Z",
+        "by": "wilson",
+        "action": "status_changed",
+        "detail": "backlog → in_progress"
+      },
+      {
+        "at": "2026-02-13T20:31:00.905Z",
+        "by": "athena",
+        "action": "started",
+        "detail": "Creating test file with one sentence"
+      },
+      {
+        "at": "2026-02-13T20:31:14.984Z",
+        "by": "athena",
+        "action": "status_changed",
+        "detail": "in_progress → in_review"
+      },
+      {
+        "at": "2026-02-13T20:31:14.984Z",
+        "by": "athena",
+        "action": "verified",
+        "detail": "File test-1.txt created with 89 bytes, contains one sentence as requested"
+      },
+      {
+        "at": "2026-02-13T20:31:21.699Z",
+        "by": "athena",
+        "action": "completed",
+        "detail": "Created test-1.txt with one sentence about Task Worker cron job verification. File size is 89 bytes."
+      }
+    ]
+  },
+  {
+    "id": "t_1771010911993_7ade3e",
+    "title": "Cron limit test 2",
+    "description": "Write one sentence to /home/athena/.openclaw/workspace/test-2.txt",
+    "project_id": "proj_personal",
+    "status": "done",
+    "priority": "medium",
+    "assigned_to": "athena",
+    "created_by": "wilson",
+    "tags": [
+      "document"
+    ],
+    "deadline": null,
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-13T19:28:31.993Z",
+    "updated_at": "2026-02-13T20:31:55.698Z",
+    "completed_at": "2026-02-13T20:31:55.698Z",
+    "report": {
+      "summary": "Created test-2.txt with sentence about Task Worker processing exactly 3 tasks per run. File size is 95 bytes.",
+      "files_changed": [
+        "/home/athena/.openclaw/workspace/test-2.txt"
+      ],
+      "time_spent_minutes": 1,
+      "verified": true,
+      "verified_at": "2026-02-13T20:31:55.698Z",
+      "verification_notes": null
+    },
+    "activity": [
+      {
+        "at": "2026-02-13T19:28:31.993Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      },
+      {
+        "at": "2026-02-13T20:31:31.786Z",
+        "by": "wilson",
+        "action": "status_changed",
+        "detail": "backlog → in_progress"
+      },
+      {
+        "at": "2026-02-13T20:31:36.652Z",
+        "by": "athena",
+        "action": "started",
+        "detail": "Creating second test file"
+      },
+      {
+        "at": "2026-02-13T20:31:49.565Z",
+        "by": "athena",
+        "action": "status_changed",
+        "detail": "in_progress → in_review"
+      },
+      {
+        "at": "2026-02-13T20:31:49.565Z",
+        "by": "athena",
+        "action": "verified",
+        "detail": "File test-2.txt created with 95 bytes, contains one sentence about task limit verification"
+      },
+      {
+        "at": "2026-02-13T20:31:55.698Z",
+        "by": "athena",
+        "action": "completed",
+        "detail": "Created test-2.txt with sentence about Task Worker processing exactly 3 tasks per run. File size is 95 bytes."
+      }
+    ]
+  },
+  {
+    "id": "t_1771010912040_51a67b",
+    "title": "Cron limit test 3",
+    "description": "Write one sentence to /home/athena/.openclaw/workspace/test-3.txt",
+    "project_id": "proj_personal",
+    "status": "done",
+    "priority": "medium",
+    "assigned_to": "athena",
+    "created_by": "wilson",
+    "tags": [
+      "document"
+    ],
+    "deadline": null,
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-13T19:28:32.040Z",
+    "updated_at": "2026-02-13T21:00:56.959Z",
+    "completed_at": "2026-02-13T21:00:56.959Z",
+    "report": {
+      "summary": "Created test-3.txt with one sentence as requested. File verified to exist with correct content.",
+      "files_changed": [
+        "/home/athena/.openclaw/workspace/test-3.txt"
+      ],
+      "time_spent_minutes": 1,
+      "verified": true,
+      "verified_at": "2026-02-13T21:00:56.959Z",
+      "verification_notes": "File exists (94 bytes), contains one sentence as requested"
+    },
+    "activity": [
+      {
+        "at": "2026-02-13T19:28:32.040Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      },
+      {
+        "at": "2026-02-13T21:00:16.901Z",
+        "by": "wilson",
+        "action": "status_changed",
+        "detail": "backlog → in_progress"
+      },
+      {
+        "at": "2026-02-13T21:00:22.895Z",
+        "by": "athena",
+        "action": "started",
+        "detail": "Beginning work on cron limit test"
+      },
+      {
+        "at": "2026-02-13T21:00:38.287Z",
+        "by": "athena",
+        "action": "comment",
+        "detail": "File created successfully at /home/athena/.openclaw/workspace/test-3.txt"
+      },
+      {
+        "at": "2026-02-13T21:00:49.613Z",
+        "by": "athena",
+        "action": "status_changed",
+        "detail": "in_progress → in_review"
+      },
+      {
+        "at": "2026-02-13T21:00:49.613Z",
+        "by": "athena",
+        "action": "verified",
+        "detail": "File exists (94 bytes), contains one sentence as requested"
+      },
+      {
+        "at": "2026-02-13T21:00:56.959Z",
+        "by": "athena",
+        "action": "completed",
+        "detail": "Created test-3.txt with one sentence as requested. File verified to exist with correct content."
+      }
+    ]
+  },
+  {
+    "id": "t_1771010912068_4227af",
+    "title": "Cron limit test 4",
+    "description": "Write one sentence to /home/athena/.openclaw/workspace/test-4.txt",
+    "project_id": "proj_personal",
+    "status": "done",
+    "priority": "medium",
+    "assigned_to": "athena",
+    "created_by": "wilson",
+    "tags": [
+      "document"
+    ],
+    "deadline": null,
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-13T19:28:32.068Z",
+    "updated_at": "2026-02-13T21:01:43.865Z",
+    "completed_at": "2026-02-13T21:01:43.865Z",
+    "report": {
+      "summary": "Created test-4.txt with one sentence demonstrating sequential task processing. File verified with correct content.",
+      "files_changed": [
+        "/home/athena/.openclaw/workspace/test-4.txt"
+      ],
+      "time_spent_minutes": 1,
+      "verified": true,
+      "verified_at": "2026-02-13T21:01:43.865Z",
+      "verification_notes": "File exists (98 bytes), contains one sentence as requested"
+    },
+    "activity": [
+      {
+        "at": "2026-02-13T19:28:32.068Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      },
+      {
+        "at": "2026-02-13T21:01:08.810Z",
+        "by": "wilson",
+        "action": "status_changed",
+        "detail": "backlog → in_progress"
+      },
+      {
+        "at": "2026-02-13T21:01:13.889Z",
+        "by": "athena",
+        "action": "started",
+        "detail": "Beginning work on cron limit test 4"
+      },
+      {
+        "at": "2026-02-13T21:01:27.501Z",
+        "by": "athena",
+        "action": "comment",
+        "detail": "File created successfully at /home/athena/.openclaw/workspace/test-4.txt"
+      },
+      {
+        "at": "2026-02-13T21:01:37.300Z",
+        "by": "athena",
+        "action": "status_changed",
+        "detail": "in_progress → in_review"
+      },
+      {
+        "at": "2026-02-13T21:01:37.300Z",
+        "by": "athena",
+        "action": "verified",
+        "detail": "File exists (98 bytes), contains one sentence as requested"
+      },
+      {
+        "at": "2026-02-13T21:01:43.865Z",
+        "by": "athena",
+        "action": "completed",
+        "detail": "Created test-4.txt with one sentence demonstrating sequential task processing. File verified with correct content."
+      }
+    ]
+  },
+  {
+    "id": "t_1771010912135_012cd2",
+    "title": "Cron limit test 5",
+    "description": "Write one sentence to /home/athena/.openclaw/workspace/test-5.txt",
+    "project_id": "proj_personal",
+    "status": "done",
+    "priority": "medium",
+    "assigned_to": "athena",
+    "created_by": "wilson",
+    "tags": [
+      "document"
+    ],
+    "deadline": null,
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-13T19:28:32.135Z",
+    "updated_at": "2026-02-13T21:02:30.796Z",
+    "completed_at": "2026-02-13T21:02:30.796Z",
+    "report": {
+      "summary": "Created test-5.txt with one sentence, completing the third task in this cron execution cycle. File verified with correct content.",
+      "files_changed": [
+        "/home/athena/.openclaw/workspace/test-5.txt"
+      ],
+      "time_spent_minutes": 1,
+      "verified": true,
+      "verified_at": "2026-02-13T21:02:30.796Z",
+      "verification_notes": "File exists (93 bytes), contains one sentence as requested"
+    },
+    "activity": [
+      {
+        "at": "2026-02-13T19:28:32.135Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      },
+      {
+        "at": "2026-02-13T21:01:55.687Z",
+        "by": "wilson",
+        "action": "status_changed",
+        "detail": "backlog → in_progress"
+      },
+      {
+        "at": "2026-02-13T21:02:00.642Z",
+        "by": "athena",
+        "action": "started",
+        "detail": "Beginning work on cron limit test 5"
+      },
+      {
+        "at": "2026-02-13T21:02:13.748Z",
+        "by": "athena",
+        "action": "comment",
+        "detail": "File created successfully at /home/athena/.openclaw/workspace/test-5.txt"
+      },
+      {
+        "at": "2026-02-13T21:02:23.726Z",
+        "by": "athena",
+        "action": "status_changed",
+        "detail": "in_progress → in_review"
+      },
+      {
+        "at": "2026-02-13T21:02:23.726Z",
+        "by": "athena",
+        "action": "verified",
+        "detail": "File exists (93 bytes), contains one sentence as requested"
+      },
+      {
+        "at": "2026-02-13T21:02:30.796Z",
+        "by": "athena",
+        "action": "completed",
+        "detail": "Created test-5.txt with one sentence, completing the third task in this cron execution cycle. File verified with correct content."
+      }
+    ]
+  },
+  {
+    "id": "t_1771029071803_e08ce3",
+    "title": "Task Worker test - create test file",
+    "description": "Create a test file at /home/athena/.openclaw/workspace/task-worker-test.txt with current timestamp",
+    "project_id": "proj_automation",
+    "status": "done",
+    "priority": "medium",
+    "assigned_to": "athena",
+    "created_by": "wilson",
+    "tags": [
+      "document"
+    ],
+    "deadline": null,
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": "https://docs.google.com/document/d/abc123",
+      "email_thread": "/home/athena/.openclaw/memory/threads/abc"
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-14T00:31:11.803Z",
+    "updated_at": "2026-02-14T12:02:21.790Z",
+    "completed_at": "2026-02-14T00:31:55.556Z",
+    "report": {
+      "summary": "Created task-worker-test.txt with timestamp and success message. File verified to exist with correct content.",
+      "files_changed": [
+        "/home/athena/.openclaw/workspace/task-worker-test.txt"
+      ],
+      "time_spent_minutes": 1,
+      "verified": true,
+      "verified_at": "2026-02-14T00:31:55.556Z",
+      "verification_notes": "File exists (71 bytes), contains timestamp and success message"
+    },
+    "activity": [
+      {
+        "at": "2026-02-14T00:31:11.803Z",
+        "by": "wilson",
+        "action": "created",
+        "detail": null
+      },
+      {
+        "at": "2026-02-14T00:31:18.370Z",
+        "by": "wilson",
+        "action": "status_changed",
+        "detail": "backlog → in_progress"
+      },
+      {
+        "at": "2026-02-14T00:31:24.069Z",
+        "by": "athena",
+        "action": "started",
+        "detail": "Beginning work on Task Worker test"
+      },
+      {
+        "at": "2026-02-14T00:31:37.634Z",
+        "by": "athena",
+        "action": "comment",
+        "detail": "Created task-worker-test.txt with timestamp"
+      },
+      {
+        "at": "2026-02-14T00:31:48.554Z",
+        "by": "athena",
+        "action": "status_changed",
+        "detail": "in_progress → in_review"
+      },
+      {
+        "at": "2026-02-14T00:31:48.554Z",
+        "by": "athena",
+        "action": "verified",
+        "detail": "File exists (71 bytes), contains timestamp and success message"
+      },
+      {
+        "at": "2026-02-14T00:31:55.556Z",
+        "by": "athena",
+        "action": "completed",
+        "detail": "Created task-worker-test.txt with timestamp and success message. File verified to exist with correct content."
+      }
+    ]
+  },
+  {
+    "id": "t_1771077521898_0e0041",
+    "title": "Test 1",
+    "description": "Test 1 -",
+    "project_id": "proj_personal",
+    "status": "backlog",
+    "priority": "medium",
+    "assigned_to": "athena",
+    "created_by": "wilson",
+    "tags": [],
+    "deadline": "2026-02-15",
+    "subtasks": [],
+    "links": {
+      "github_issue": null,
+      "github_pr": null,
+      "gdrive_doc": null,
+      "email_thread": null
+    },
+    "source": {
+      "type": "manual",
+      "sender": null,
+      "subject": null,
+      "received_at": null,
+      "raw_excerpt": null
+    },
+    "created_at": "2026-02-14T13:58:41.898Z",
+    "updated_at": "2026-02-14T13:58:41.898Z",
+    "completed_at": null,
+    "report": null,
+    "activity": [
+      {
+        "at": "2026-02-14T13:58:41.898Z",
         "by": "wilson",
         "action": "created",
         "detail": null
